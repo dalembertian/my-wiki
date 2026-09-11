@@ -41,7 +41,11 @@ Summary text lives in exactly one place (`2.` and `3.`), so the index can stay l
 
 **Article pages** live in the category folders under [`wiki/`](<./wiki/>) — `AI News`, `AI Insights`, `Building AI Agents`, and so on. Each one distils **one source** (occasionally two, when they cover the same ground) into a retrieval-friendly page: what it claims, what's interesting, how it relates to everything else already in the wiki. Every article page ends with a `## Sources` section linking back to the raw material in `source/`.
 
-> **A note on `source/`:** those files are verbatim copies of other people's articles, kept locally for the LLM to read — they're deliberately **not** published to this repo, so the `## Sources` links will 404 on GitHub. Each page's source is a clipped article whose original URL is in its frontmatter, so the originals stay reachable; the links resolve normally in a local clone that has its own `source/`.
+> **⚠️ Those `## Sources` links will 404 on GitHub.** The `source/` folder is gitignored and deliberately not published.
+>
+> It holds verbatim copies of other people's articles, clipped for the LLM to read. Keeping them locally is ordinary private reading; pushing them to a public repo is redistribution, and citing a URL is attribution, not a licence. The wiki pages are my own summaries and analysis, so those are mine to publish — the articles they're derived from are not.
+>
+> Nothing is actually lost: every source is a clipped article with its original URL in the frontmatter, so you can always reach the real thing. And in a local clone with its own `source/`, the links resolve normally.
 
 **Syntheses** live in [`wiki/_syntheses/`](<./wiki/_syntheses/>) and are the point of the whole exercise. A synthesis is derived from *other wiki pages*, not from raw sources — it exists to hold a claim that **no single article makes**. For example, [*The Harness Is the Product*](<./wiki/_syntheses/The Harness Is the Product.md>) collects four independent vantage points — four labs' pricing, a Fowler essay, LangChain's middleware design, NVIDIA's silicon strategy — that separately converge on one conclusion none of them states alone.
 
@@ -76,14 +80,14 @@ cd my-wiki
 rm -rf .git && git init                 # start your own history
 
 # Delete the content — all of it
-rm -rf wiki                             # source/ and Clippings/ aren't in the clone
+rm -rf wiki                             # source/ isn't in the clone (see above)
 rm 1.Index.md 2.Syntheses.md 3.Articles.md 4.History.md tracking/*.md
 rm settings/categories.md               # my categories; yours will differ
 ```
 
 That's the whole reset. The four catalogs and the two tracking files are fully specified in `settings/schema.md`, and its **Bootstrapping** rule tells the agent to recreate anything missing from that spec on its first run — so there's nothing to hand-stub, and no chance of a stub that disagrees with the schema.
 
-**What survives:** `CLAUDE.md`, `settings/schema.md`, `settings/llm-wiki.md`, `.gitignore`, and this README (rewrite or delete it). `settings/schema.md` is domain-independent — you shouldn't need to edit a word of it to start. **What goes:** everything under `wiki/` — those are my notes, not yours. (`source/` and `Clippings/` are gitignored here, so they won't be in your clone at all.) If you're using Codex or another agent, rename `CLAUDE.md` to `AGENTS.md`.
+**What survives:** `CLAUDE.md`, `settings/schema.md`, `settings/llm-wiki.md`, `.gitignore`, and this README (rewrite or delete it). `settings/schema.md` is domain-independent — you shouldn't need to edit a word of it to start. **What goes:** everything under `wiki/` — those are my notes, not yours. If you're using Codex or another agent, rename `CLAUDE.md` to `AGENTS.md`.
 
 ### 2. Point the agent at it
 
@@ -107,7 +111,7 @@ After a dozen or so pages, try `Lint the wiki` and `Which pages now qualify as a
 
 Not required — everything here is plain markdown and GitHub renders it fine — but it makes the whole thing considerably nicer:
 
-- **[Obsidian Web Clipper](https://obsidian.md/clipper)** — a browser extension that turns any web article into clean markdown with the source URL in the frontmatter. This is how essentially every article in `source/` got here. Note this repo's convention: clippings land in a gitignored `Clippings/` folder first, and **moving a file from `Clippings/` to `source/` is the manual signal that it's ready to be ingested** — which keeps half-finished clippings out of the agent's work queue.
+- **[Obsidian Web Clipper](https://obsidian.md/clipper)** — a browser extension that turns any web article into clean markdown with the source URL in the frontmatter. This is how essentially every article in `source/` got here. One convention worth stealing (it's in the schema, though the folder itself isn't in this repo): clip into a scratch `Clippings/` folder that the agent is told to ignore entirely, and make **moving a file from `Clippings/` to `source/` the manual signal that it's ready to ingest**. Raw clippings usually need work first — renaming, downloading images, stripping paywall cruft, or just deciding they aren't worth keeping — and this keeps the half-finished ones out of the agent's work queue instead of having it ask about them every session.
 - **[obsidian-git](https://github.com/Vinzent03/obsidian-git)** — auto-commits the vault every 10 minutes and pushes on a schedule. You get full version history of your wiki for free, without ever thinking about it.
 - **Download images locally** — Settings → Files and links → set the attachment folder to `source/_assets/`, then bind the "Download attachments for current file" command to a hotkey. The agent can then actually look at the images instead of at dead URLs.
 - **Graph view** — the fastest way to see the shape of your wiki: what's a hub, what's peripheral, what's orphaned.
