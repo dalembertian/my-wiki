@@ -20,7 +20,7 @@ The components each have their own page, and together they enumerate the harness
 - **Knowledge** — durable written context as plain Markdown rather than a protocol, and the strategic claim that this is where advantage accumulates: [[The Case for Markdown Skill Files Instead of MCP Servers]] and [[Markdown as the New Agent Memory Moat]].
 - **The loop** — one floor up: not what a single run can do, but when runs happen and what feeds the next one: [[Loop Engineering]].
 - **Guardrails** — what to put in place before a loop touches real files: [[Defending Against Destructive AI Agents]].
-- **The whole thing, small enough to read** — [[A Minimal Coding Agent Harness in Python]], and pattern 9's "abstracted primitives" framing in [[Nine Emerging Developer Patterns for the AI Era]].
+- **The whole thing, assembled** — pattern 9's "abstracted primitives" framing in [[Nine Emerging Developer Patterns for the AI Era]], and the six off-the-shelf assemblies weighed against each other in [[Six Python Agent Frameworks Compared]].
 
 ## The strongest evidence, and the strongest counter-evidence
 

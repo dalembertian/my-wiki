@@ -28,14 +28,6 @@ His alternative: the US Copyright Office's existing rule that **AI-generated wor
 
 Doctorow expects most AI companies and datacenters to fail, similar to WorldCom's fraud leaving behind usable fiber-optic infrastructure. Post-bubble AI residue: engineers skilled in applied statistics, cheap secondhand GPUs (useful to VFX artists, climate scientists), and open-source models doing narrow useful tasks (transcription, summarization, image editing) — the stuff that would have just been called "plugins" if it had arrived without hype. His closing image: AI as "asbestos in the walls" of tech society — a mess that will need excavating for a generation regardless of how the bubble resolves.
 
-## Reader's counterpoints (from the annotated copy)
-
-A close reading of this piece pushed back on a few points worth keeping on record:
-
-- On the radiology accountability-sink argument: shouldn't the actual comparison be empirical — net diagnostic outcomes for AI-assisted vs. human-only workflows — rather than assumed bad? And if the "$20M → $10M to AI, pocket $10M" framing holds, why not split differently and pass savings on as cheaper checkups? A real risk noted: if radiology becomes "mostly review AI's work," the field may see less human-led development and it's unclear whether AI alone can advance the state of the art.
-- On "AI is just a word-guessing program" — this argument is specifically about **LLMs**, not AI in general; whether it holds for future architectures is open. Also flagged: would reducing developers to centaur-reviewers (not reverse-centaurs) actually stop human skill development, or just redirect it?
-- On AI art and intent: agreed as basically sound, but again scoped explicitly to *current generative AI*, not a claim about AI in general.
-
 ## Cross-reference
 
 Doctorow's "AI can't do your job, an AI salesman can get you fired anyway" argument is a sharp counter-read of the same capability jump that [[AI Doomsday Scenario Rattles US Markets]] treats as real and [[Free Intelligence and Radical Abundance]] treats as liberating — Doctorow's claim is that the economic disruption is real but doesn't require the AI to actually be competent, just cheap and hard to hold accountable.
@@ -50,6 +42,5 @@ Read against the grain of this page: [[The Origins of Generative AI]] assembles 
 
 ## Sources
 - [Cory Doctorow - AI companies will fail](<../../source/Cory Doctorow - AI companies will fail.md>)
-- [Cory Doctorow - AI companies will fail (comment)](<../../source/Cory Doctorow - AI companies will fail (comment).md>)
 
 #ai-economy #ai-hype #ai-labor #copyright #market-impact

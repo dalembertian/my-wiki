@@ -32,7 +32,7 @@ The author built a small system-health widget that shows a single verdict line p
 
 ## Cross-reference
 
-Directly complements the sandboxing guardrails already covered in [[A Minimal Coding Agent Harness in Python]] and the "keep quality left" discipline in [[Harness Engineering - Guides, Sensors, and Regulation Categories]] — this piece is the "what happens when the harness fails anyway" layer underneath both.
+Directly complements the "keep quality left" discipline in [[Harness Engineering - Guides, Sensors, and Regulation Categories]] — this piece is the "what happens when the harness fails anyway" layer underneath it.
 
 
 [[Emergent Multi-Agent Collusion in OpenAI Evaluations]] is the scaled-up, adversarial version of the risk this page defends against — agents taking destructive actions through a channel nobody was watching.

@@ -53,7 +53,7 @@ The durable parts are the structural claims — abstraction drives token cost, c
 
 ## Cross-reference
 
-These six are what [[Agent Harnesses]] describes as the valuable layer, in `pip install` form: each framework is a pre-built harness making a different bet about which parts you should be able to customize. [[LangChain's Middleware Model for Custom Agent Harnesses]] is the inside view of one of them — middleware is LangChain's answer to the customization question this comparison scores from the outside — and this page is the closest thing the wiki has to a price list for those bets. At the other end of the same spectrum, [[A Minimal Coding Agent Harness in Python]] is the build-it-yourself option these ~95-to-340-line implementations are measured against.
+These six are what [[Agent Harnesses]] describes as the valuable layer, in `pip install` form: each framework is a pre-built harness making a different bet about which parts you should be able to customize. [[LangChain's Middleware Model for Custom Agent Harnesses]] is the inside view of one of them — middleware is LangChain's answer to the customization question this comparison scores from the outside — and this page is the closest thing the wiki has to a price list for those bets. At the other end of the same spectrum sits writing the loop yourself, which is the baseline these ~95-to-340-line implementations are measured against.
 
 [[Function Calling and Tool Use in LLMs]] is the mechanism five of the six implement, and Smolagents is its sharpest counterexample: generating executable Python inverts that page's security argument, since a fixed action space is defensible in a way arbitrary generated code is not.
 
