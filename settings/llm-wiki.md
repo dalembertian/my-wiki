@@ -1,6 +1,9 @@
 ---
 source: https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f
 ---
+
+> **Not my work.** This document was written by Andrej Karpathy and is reproduced here verbatim from [his gist](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f), because it is the seed this wiki grew from and the rest of `settings/` only makes sense against it. It carries no licence of its own, and it is explicitly excluded from this repository's licences — see [`LICENSE`](<../LICENSE>). Everything specific to *this* wiki lives in [`schema.md`](<./schema.md>) and [`categories.md`](<./categories.md>) instead.
+
 # LLM Wiki
 
 A pattern for building personal knowledge bases using LLMs.

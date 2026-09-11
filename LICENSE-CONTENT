@@ -1,0 +1,36 @@
+# Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+Copyright (c) 2026 Rubens Altimari
+
+The wiki content in this repository — everything under `wiki/`, plus
+`1.Index.md`, `2.Syntheses.md`, `3.Articles.md` and `4.History.md` — is
+licensed under the Creative Commons Attribution 4.0 International License.
+
+**You are free to:**
+
+  - **Share** — copy and redistribute the material in any medium or format
+  - **Adapt** — remix, transform, and build upon the material
+  - for any purpose, even commercially.
+
+**Under one condition:**
+
+  - **Attribution** — you must give appropriate credit, provide a link to the
+    licence, and indicate if changes were made. You may do so in any reasonable
+    manner, but not in any way that suggests I endorse you or your use.
+
+Full licence deed: https://creativecommons.org/licenses/by/4.0/
+Full legal code:   https://creativecommons.org/licenses/by/4.0/legalcode
+
+## Scope and exclusions
+
+These pages are my own summaries, analysis and synthesis of material I have
+read. They are original writing and are mine to license.
+
+They are *derived from* third-party articles that are **not** covered by this
+licence and are not published in this repository — see `source/` in LICENSE.
+Where a page quotes or closely paraphrases a source, the rights in that
+underlying material remain with its author or publisher.
+
+The repository's machinery — `CLAUDE.md`, `settings/schema.md`,
+`settings/categories.md` and `README.md` — is MIT-licensed instead. See LICENSE.
+`settings/llm-wiki.md` is Andrej Karpathy's work and is covered by neither.

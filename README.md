@@ -119,4 +119,15 @@ Not required — everything here is plain markdown and GitHub renders it fine �
 
 ---
 
+## License
+
+Two licences, because this repo is two things:
+
+- **The machinery** — `CLAUDE.md`, `settings/schema.md`, `settings/categories.md` and this README — is [MIT](<./LICENSE>). Take it, adapt it, build your own wiki on it. That's the point.
+- **The wiki content** — everything under `wiki/`, plus the four catalogs — is [CC BY 4.0](<./LICENSE-CONTENT>). It's my own writing; reuse it freely with credit.
+
+Two things are covered by neither: [`settings/llm-wiki.md`](<./settings/llm-wiki.md>) is Andrej Karpathy's, reproduced verbatim with attribution, and `source/` isn't published here at all (see the note above).
+
+---
+
 *Built jointly, one argument at a time, by* **Rubens & Claude**.
