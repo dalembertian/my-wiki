@@ -1,0 +1,18 @@
+# OS / editor noise
+.DS_Store
+
+# Obsidian local state — plugins, layout, hotkeys. Churns constantly and is
+# machine-local; Obsidian Sync covers the backup case.
+/.obsidian
+/.trash
+
+# Staging area for fresh web clippings, before they're cleaned up and
+# promoted into source/. Not ready to be read, let alone published.
+/Clippings
+
+# Raw sources: verbatim copies of other people's articles, kept locally for
+# the LLM to read. Not redistributed — every wiki page cites its source URL
+# in its `## Sources` section, so the originals stay reachable.
+# NOTE: this means source/ is NOT backed up by git. Obsidian Sync (or your
+# own backup) is the only copy.
+/source
