@@ -34,7 +34,7 @@ The core design concept: how well a harness's context, failure handling, and pol
 
 ## Cross-reference
 
-A concrete, framework-level answer to the open question [[Harness Engineering - Guides, Sensors, and Regulation Categories]] raises about keeping a growing harness internally coherent — middleware composability is one proposed answer. FilesystemMiddleware/MemoryMiddleware/SkillsMiddleware map directly onto the taxonomy in [[Agent Memory - Semantic, Episodic, and Procedural]], and SubAgentMiddleware/TodoListMiddleware are direct implementations of two of the five primitives in [[Loop Engineering]].
+A concrete, framework-level answer to the open question [[Harness Engineering - Guides, Sensors, and Regulation Categories]] raises about keeping a growing harness internally coherent — middleware composability is one proposed answer. SubAgentMiddleware and TodoListMiddleware are direct implementations of two of the five primitives in [[Loop Engineering]].
 
 
 [[NVIDIA's Agent Infrastructure Bet]] shows the same decomposition arriving from the hardware side — memory, tools/skills, and governance as separable blocks around a cognitive loop, which is what this middleware model makes composable in code.

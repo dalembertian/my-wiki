@@ -25,7 +25,6 @@ Checklist of every file in `source/`. Diff this against what's actually in `sour
 - [x] Github Vibe Coding Roadmap.md — [AI Agent Learning Roadmap and Resources](<../wiki/Building AI Agents/AI Agent Learning Roadmap and Resources.md>) (duplicate of "Vibe coding Your roadmap to becoming an AI developer.md")
 - [x] Harness engineering for coding agent users.md — [Harness Engineering - Guides, Sensors, and Regulation Categories](<../wiki/Building AI Agents/Harness Engineering - Guides, Sensors, and Regulation Categories.md>)
 - [x] Improving Prompts.md — [Everyday ChatGPT Prompting Tips](<../wiki/AI Tools/Everyday ChatGPT Prompting Tips.md>)
-- [x] Long-Term Agentic Memory with LangGraph.md — [Agent Memory - Semantic, Episodic, and Procedural](<../wiki/Building AI Agents/Agent Memory - Semantic, Episodic, and Procedural.md>)
 - [x] Vibe coding Your roadmap to becoming an AI developer.md — [AI Agent Learning Roadmap and Resources](<../wiki/Building AI Agents/AI Agent Learning Roadmap and Resources.md>) (duplicate of "Github Vibe Coding Roadmap.md")
 - [x] AI - RAG vs fine-tuning.md — [RAG vs. Fine-Tuning](<../wiki/AI Fundamentals/RAG vs. Fine-Tuning.md>)
 - [x] An AI ‘debt bomb’ crisis? No. This isn’t Enron 2.0.md — [The AI 'Debt Bomb' - Financial Engineering, Not Fraud](<../wiki/AI Insights/The AI 'Debt Bomb' - Financial Engineering, Not Fraud.md>)

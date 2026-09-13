@@ -15,7 +15,7 @@ Defines agents as systems where **LLM output controls the workflow** (vs. fixed,
 
 ## Cross-reference
 
-For a durable *concept* rather than a resource list, see [[Agent Memory - Semantic, Episodic, and Procedural]] (split out separately since the memory taxonomy is worth citing on its own). For hands-on architecture, see [[Function Calling and Tool Use in LLMs]] and [[Harness Engineering - Guides, Sensors, and Regulation Categories]].
+For hands-on architecture, see [[Function Calling and Tool Use in LLMs]] and [[Harness Engineering - Guides, Sensors, and Regulation Categories]].
 
 
 [[The Harness Is the Product]] points here as the learning path for building the layer it describes.

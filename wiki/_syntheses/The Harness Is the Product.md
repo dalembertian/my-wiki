@@ -15,7 +15,6 @@ What makes this worth a synthesis rather than a tag is that it is not one argume
 
 The components each have their own page, and together they enumerate the harness:
 
-- **Memory** — the semantic/episodic/procedural taxonomy, and why an agent that forgets between runs cannot accumulate anything: [[Agent Memory - Semantic, Episodic, and Procedural]].
 - **Tools** — how function calling actually works, plus the security argument for keeping the action space fixed and small: [[Function Calling and Tool Use in LLMs]].
 - **Knowledge** — durable written context as plain Markdown rather than a protocol, and the strategic claim that this is where advantage accumulates: [[The Case for Markdown Skill Files Instead of MCP Servers]] and [[Markdown as the New Agent Memory Moat]].
 - **The loop** — one floor up: not what a single run can do, but when runs happen and what feeds the next one: [[Loop Engineering]].

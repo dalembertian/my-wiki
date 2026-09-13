@@ -25,7 +25,7 @@ An a16z survey of early, real-pain-point-driven shifts in how software gets buil
 Pattern 8 (MCP) is in direct tension with [[The Case for Markdown Skill Files Instead of MCP Servers]], which argues many MCP servers are solving *knowledge* problems that a cheap Markdown skill file would handle better — MCP being reserved for genuine *execution*. Pattern 9's "abstracted primitives" thinking is the same instinct behind [[Agent Harnesses]] — infrastructure vendors racing to own the layer agents build on top of.
 
 
-Several patterns here have dedicated pages: pattern 1's prompts-as-source-of-truth is argued out in [[Prompt Engineering - Is It a New Programming Language]], pattern 7's asynchronous agent work is developed fully in [[Loop Engineering]], and pattern 8's tool layer gets a security-motivated treatment in [[Function Calling and Tool Use in LLMs]] and a memory-focused one in [[Agent Memory - Semantic, Episodic, and Procedural]]. The reason these patterns are emerging at all — software shifting from coded rules to learned behavior — is the subject of [[From Data-Driven Software to Generative AI]].
+Several patterns here have dedicated pages: pattern 1's prompts-as-source-of-truth is argued out in [[Prompt Engineering - Is It a New Programming Language]], pattern 7's asynchronous agent work is developed fully in [[Loop Engineering]], and pattern 8's tool layer gets a security-motivated treatment in [[Function Calling and Tool Use in LLMs]]. The reason these patterns are emerging at all — software shifting from coded rules to learned behavior — is the subject of [[From Data-Driven Software to Generative AI]].
 
 
 Pattern 9's abstracted-primitives thinking is one of the vantage points collected in [[The Harness Is the Product]].
