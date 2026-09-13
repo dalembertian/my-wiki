@@ -1,6 +1,8 @@
 # NVIDIA's Agent Infrastructure Bet (GTC Taipei 2026)
 
-Personal notes on Jensen Huang's GTC Taipei 2026 keynote, covering NVIDIA's platforms across AI-factory infrastructure, agentic AI, physical AI/robotics, and AI-native personal computing — branded partly around the phrase **"CPU for Agents."**
+Jensen Huang's GTC Taipei 2026 keynote, unveiling NVIDIA's platforms across AI-factory infrastructure, agentic AI, physical AI/robotics, and AI-native personal computing — branded partly around the phrase **"CPU for Agents."**
+
+That phrase is doing more than branding: it proposes a re-definition of the PC itself, from *Personal Computer* to *Personal Agent* — the machine on your desk reframed as the thing that runs your agent rather than the thing you operate directly.
 
 The keynote's agent-architecture diagram restates the same "Agent = LLM + Harness" framing used throughout this wiki's harness pages: a cognitive loop (context → reason → act → observe, feeding back into itself) wired to memory, tools/skills, and security/governance, sitting between prompt and orchestration.
 
@@ -36,8 +38,6 @@ flowchart LR
     style AGENT fill:#050505,stroke:#dddddd,color:#ffffff
     style LOOP fill:#050505,stroke:#aaaaaa,color:#ffffff
 ```
-
-Open questions flagged for internal follow-up (not resolved in the source itself): how much "CPU for Agents" compute a given team would actually need, and whether partners already exist for when that need materializes; whether CUDA specifically is the real moat here and how to use it competitively rather than just as a dependency; and whether relevant NVIDIA AI Enterprise toolkit licensing is already in place.
 
 ## Cross-reference
 
