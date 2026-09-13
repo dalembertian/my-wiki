@@ -16,7 +16,7 @@ This is a narrow, high-precision harness built entirely out of prompt constraint
 
 ## Cross-reference
 
-A concrete, non-coding illustration of the discipline [[Prompt Engineering - Is It a New Programming Language]] debates in the abstract, and a natural complement to the guardrail-design discussion in [[Function Calling and Tool Use in LLMs]] — here the guardrail is entirely prompt-level rather than code-level.
+A natural complement to the guardrail-design discussion in [[Function Calling and Tool Use in LLMs]] — here the guardrail is entirely prompt-level rather than code-level. [[Everyday ChatGPT Prompting Tips]] is the casual end of the same skill: the habitual, low-stakes version of the prompt discipline this page pushes to its limit.
 
 
 [[RAG vs. Fine-Tuning]] frames the two standard ways to give a model domain knowledge; this page is the third path it doesn't cover — no retrieval pipeline and no retraining, just uploaded documents plus a prompt strict enough to refuse anything they don't say.

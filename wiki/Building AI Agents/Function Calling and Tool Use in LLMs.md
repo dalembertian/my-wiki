@@ -26,7 +26,7 @@ Fowler revisits his own 15-year-old skepticism of rules engines: the pitch that 
 Directly complements the MCP-vs-plain-tools tradeoff in [[Nine Emerging Developer Patterns for the AI Era]] (pattern 8) and [[The Case for Markdown Skill Files Instead of MCP Servers]] — this piece adds the security-motivated case for *not* reaching for MCP by default: a fixed action space is easier to secure than a dynamically-discovered one.
 
 
-[[A Document-Grounded Rules Referee via Prompt Engineering]] is the limiting case of the argument here: a task where the guardrail is built entirely at the prompt level and the action space is empty, showing what is achievable before any tool layer is introduced. [[AI Agent Learning Roadmap and Resources]] collects the tutorials for building the tool layer in practice.
+[[A Document-Grounded Rules Referee via Prompt Engineering]] is the limiting case of the argument here: a task where the guardrail is built entirely at the prompt level and the action space is empty, showing what is achievable before any tool layer is introduced.
 
 
 Smolagents, in [[Six Python Agent Frameworks Compared]], is the live counterexample to the mechanism described here: its `CodeAgent` emits executable Python instead of a JSON tool call, which buys loops and conditionals that JSON cannot express — and gives up exactly the security property this page argues for, its default executor being documented as not a sandbox.

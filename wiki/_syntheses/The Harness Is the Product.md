@@ -50,11 +50,6 @@ Read across the cluster, that is the actual dividing line. Where a mechanical gr
 
 "The harness is the product" is a conclusion that happens to benefit almost everyone stating it — labs selling runtimes, frameworks selling composability, a hardware vendor selling agent silicon. The engineering pages and the Fermat result are the parts of this cluster with no runtime to sell, so they carry the most weight. Worth re-testing as evidence accumulates: the honest version of the claim may be narrower — *the harness is where the remaining difficulty is* — which is not the same as it being where the durable margin is.
 
-## Learning path
-
-[[AI Agent Learning Roadmap and Resources]] collects the tutorials and courses for building these pieces in practice; it doesn't argue the thesis, but it's where to start if you want to.
-
-
 ## Related syntheses
 
 [[Is the AI Boom Real]] takes the verification split developed here as its sharpest resolution of whether AI capability is real — it predicts uneven, domain-by-domain displacement rather than a uniform wave. [[The Origins of Generative AI]] is the history that produced the models this layer wraps.

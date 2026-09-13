@@ -25,7 +25,7 @@ The essay itself was "planned and written by hand," then proofread and improved 
 
 ## Cross-reference
 
-Directly complements [[Prompt Engineering - Is It a New Programming Language]] (same "is this a durable skill or an erosion of one" tension) and [[When ChatGPT Broke an Entire Field - An Oral History]] (a parallel account of skill/field disruption, in NLP research rather than software engineering).
+Directly complements [[When ChatGPT Broke an Entire Field - An Oral History]] — a parallel account of skill and field disruption, in NLP research rather than software engineering.
 
 
 [[Is the AI Boom Real]] uses this page as a ground-truth check against the claim that AI's labor effects are pure hype.

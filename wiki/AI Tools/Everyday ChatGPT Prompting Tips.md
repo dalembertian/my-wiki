@@ -1,6 +1,6 @@
 # Everyday ChatGPT Prompting Tips
 
-A practitioner's cookbook of everyday ChatGPT prompts, merged from two similar listicles (Tom's Guide). The theoretical companion to this is [[Prompt Engineering - Is It a New Programming Language]] — that page covers the "is this a discipline" debate; this one is the day-to-day practitioner version.
+A practitioner's cookbook of everyday ChatGPT prompts, merged from two similar listicles (Tom's Guide).
 
 ## Shape the output
 
@@ -33,7 +33,7 @@ Ask ChatGPT to draft a well-structured prompt **for a different AI tool** (Midjo
 
 ## Cross-reference
 
-See [[Prompt Engineering - Is It a New Programming Language]] for the more theoretical/architectural framing of prompting (structure, patterns like few-shot and chain-of-thought, temperature/Top-P) that several of these tips are informal instances of.
+[[A Document-Grounded Rules Referee via Prompt Engineering]] is the same skill taken to its disciplined extreme — a single prompt built strictly enough to referee board-game rules from uploaded documents without inventing any — where the tips here are the informal, habitual end of prompt-craft.
 
 ## Sources
 - [ChatGPT prompts I can't live without](<../../source/ChatGPT prompts I can't live without.md>)

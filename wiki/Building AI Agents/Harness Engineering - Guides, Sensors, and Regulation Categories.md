@@ -40,7 +40,7 @@ How do you keep a growing harness internally coherent as guides and sensors accu
 See [[Agent Harnesses]] for how the major AI labs are packaging and pricing pieces of this same layer as a product.
 
 
-Applied instances of this discipline elsewhere in the wiki: [[LangChain's Middleware Model for Custom Agent Harnesses]] implements guides and sensors as composable middleware; [[Loop Engineering]] extends the steering loop across many runs rather than within one; [[Defending Against Destructive AI Agents]] is the safety-critical case, where the sensors exist to catch destructive actions before they land; [[Claude's Computer-Checked Proof of Fermat's Last Theorem]] is the largest demonstration available, with a compiler as the sensor and a shared DAG as the guide; and [[AI Agent Learning Roadmap and Resources]] collects the material for learning to build these.
+Applied instances of this discipline elsewhere in the wiki: [[LangChain's Middleware Model for Custom Agent Harnesses]] implements guides and sensors as composable middleware; [[Loop Engineering]] extends the steering loop across many runs rather than within one; [[Defending Against Destructive AI Agents]] is the safety-critical case, where the sensors exist to catch destructive actions before they land; [[Claude's Computer-Checked Proof of Fermat's Last Theorem]] is the largest demonstration available, with a compiler as the sensor and a shared DAG as the guide.
 
 
 [[NVIDIA's Agent Infrastructure Bet]] is this same decomposition showing up in a hardware vendor's keynote — evidence the discipline described here is converging into an industry-standard mental model.
