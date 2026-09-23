@@ -46,6 +46,9 @@ This is the theoretical backbone underneath several other pieces in this wiki, a
 
 [[Is the AI Boom Real]] places this framework's bimodal outcome among the other positions on whether the boom is real.
 
+
+[[Emergent Agent Dialects and the Oversight Problem]] is a small, checkable version of this page's hardest assumption — that we could tell what a system is doing by watching it. Today's agents, nowhere near AGI and with no incentive to conceal anything, already drift into communication humans can read but not understand, which suggests losing interpretive access is a gradual default rather than an event that arrives with a takeoff.
+
 ## Sources
 - [The AI Revolution - Part 1, The Road to Superintelligence](<../../source/The AI Revolution - Part 1, The Road to Superintelligence.md>)
 - [The AI Revolution - Part 2, Our Immortality or Extinction](<../../source/The AI Revolution - Part 2, Our Immortality or Extinction.md>)

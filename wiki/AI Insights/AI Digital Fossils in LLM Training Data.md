@@ -19,6 +19,8 @@ The pathological case of the first consequence listed in [[From Data-Driven Soft
 
 Sharpest contrast in the wiki: [[Claude's Computer-Checked Proof of Fermat's Last Theorem]] is the corpus-integrity problem *solved* — a body of knowledge made machine-checkable so errors cannot silently propagate into what gets built on top — while this page is the same problem left unsolved in the scientific literature, where a nonsense phrase becomes permanent ground truth. Two mitigations at the retrieval end: [[RAG vs. Fine-Tuning]] notes source integrity as RAG's central weakness, and [[A Document-Grounded Rules Referee via Prompt Engineering]] shows the strict form of the fix — a canonical refusal string instead of a plausible-sounding completion.
 
+The inverse case is [[Emergent Agent Dialects and the Oversight Problem]]: this page is about human-origin nonsense becoming permanent model vocabulary through the training corpus, that one about agents minting vocabulary of their own at runtime, with meanings no corpus records. Both make the same point about where meaning is actually fixed — not in anything a reader can inspect.
+
 ## Sources
 - [A Strange Phrase Keeps Turning Up in Scientific Papers, But Why?](<../../source/A Strange Phrase Keeps Turning Up in Scientific Papers, But Why?.md>)
 

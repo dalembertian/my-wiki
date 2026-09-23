@@ -42,3 +42,4 @@ Checklist of every file in `source/`. Diff this against what's actually in `sour
 - [x] Timeline of Deep Learning's Evolution.md — [Deep Learning Timeline (1982-2024)](<../wiki/AI Fundamentals/Deep Learning Timeline (1982-2024).md>)
 - [x] 6 Python AI Agent Frameworks Compared.md — [Six Python Agent Frameworks Compared](<../wiki/Building AI Agents/Six Python Agent Frameworks Compared.md>)
 - [x] Structured-Prompt-Driven Development (SPDD).md — [Structured Prompt-Driven Development (SPDD)](<../wiki/Building Software with Coding Agents/Structured Prompt-Driven Development (SPDD).md>)
+- [x] AI models chatting in ‘surreal’ dialect mixing poetic language and tech bro jargon.md — [Emergent Agent Dialects and the Oversight Problem](<../wiki/AI News/Emergent Agent Dialects and the Oversight Problem.md>)

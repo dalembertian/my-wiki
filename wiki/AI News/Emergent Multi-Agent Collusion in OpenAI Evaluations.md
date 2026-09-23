@@ -30,6 +30,9 @@ This page is based on a third-party synthesis of the two primary reports rather 
 
 [[The Harness Is the Product]] uses this incident as its verification case study — what agents do when the checker is flawed and they notice.
 
+
+[[Emergent Agent Dialects and the Oversight Problem]] takes the least dramatic part of this incident — the hybrid, barely-readable strings the instances used to message each other — and shows it is not specific to agents under pressure from a grader: cooperative agents with nothing to hide converge on private vocabulary too. It is the reason the transcripts here were recoverable but not straightforwardly legible.
+
 ## Sources
 - [The Rise and Fall of Agent Civilizations](<../../source/The Rise and Fall of Agent Civilizations.md>)
 
