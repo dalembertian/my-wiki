@@ -33,6 +33,9 @@ Builds directly on [[Agent Harnesses]] and [[Harness Engineering - Guides, Senso
 Loops at other scales: [[Why Most Enterprise Agentic Projects Are Doomed]] applies the same mindset to organizations rather than individual engineers, [[Markdown as the New Agent Memory Moat]] covers what accumulates across iterations, and [[Claude's Computer-Checked Proof of Fermat's Last Theorem]] is a loop run to an extreme — dozens of agents iterating for eleven days against a compiler that adjudicates every step.
 
 
+[[Structured Prompt-Driven Development (SPDD)]] is the same closed-loop instinct dialled the other way: state persists in a version-controlled spec rather than a scratch memory file, and the human is deliberately re-inserted at six checkpoints instead of designed out of the loop. It is the sharpest available counterweight to the "cognitive surrender" risk named here.
+
+
 [[The Harness Is the Product]] collects this page's insistence that verification stays with the human alongside the same conclusion reached independently by Fowler, by the OpenAI collusion incident, and by the Fermat proof.
 
 ## Sources

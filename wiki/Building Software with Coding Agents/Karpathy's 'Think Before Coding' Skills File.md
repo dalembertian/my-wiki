@@ -15,6 +15,9 @@ His honest answer: hard to tell. Given the non-deterministic nature of these mod
 A real-world data point for [[The Case for Markdown Skill Files Instead of MCP Servers]] — a minimal skill file achieving outsized reach and influence, for better or for uncertain.
 
 
+[[Structured Prompt-Driven Development (SPDD)]] is this file's principle taken to the industrial end of the scale — "think before coding" expanded into a seven-part canvas, a CLI and a six-checkpoint review workflow. The pair also frames the evidence problem: neither a 65-line rules file nor a full methodology currently has an objective measure of whether the artifact was any good.
+
+
 [[Markdown as the New Agent Memory Moat]] places this artifact in the wider industry bet on Markdown as agent substrate — while cautioning that it is a *different* Karpathy artifact from the "LLM Wiki" gist discussed there.
 
 ## Sources

@@ -28,6 +28,9 @@ The essay itself was "planned and written by hand," then proofread and improved 
 Directly complements [[When ChatGPT Broke an Entire Field - An Oral History]] — a parallel account of skill and field disruption, in NLP research rather than software engineering.
 
 
+[[Structured Prompt-Driven Development (SPDD)]] is a team-scale attempt to make the "craftsman" mode mandatory rather than a matter of personal discipline: it claims that forcing developers to model, abstract and review intent before any code is generated is what stops their own judgement from atrophying — an answer to this page's worry about the prompt-only specialist who can't catch the AI's mistakes.
+
+
 [[Is the AI Boom Real]] uses this page as a ground-truth check against the claim that AI's labor effects are pure hype.
 
 ## Sources

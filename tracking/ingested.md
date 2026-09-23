@@ -41,3 +41,4 @@ Checklist of every file in `source/`. Diff this against what's actually in `sour
 - [x] Formalizing Fermat's Last Theorem.md — [Claude's Computer-Checked Proof of Fermat's Last Theorem](<../wiki/AI News/Claude's Computer-Checked Proof of Fermat's Last Theorem.md>)
 - [x] Timeline of Deep Learning's Evolution.md — [Deep Learning Timeline (1982-2024)](<../wiki/AI Fundamentals/Deep Learning Timeline (1982-2024).md>)
 - [x] 6 Python AI Agent Frameworks Compared.md — [Six Python Agent Frameworks Compared](<../wiki/Building AI Agents/Six Python Agent Frameworks Compared.md>)
+- [x] Structured-Prompt-Driven Development (SPDD).md — [Structured Prompt-Driven Development (SPDD)](<../wiki/Building Software with Coding Agents/Structured Prompt-Driven Development (SPDD).md>)

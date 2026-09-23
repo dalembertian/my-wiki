@@ -46,6 +46,9 @@ Applied instances of this discipline elsewhere in the wiki: [[LangChain's Middle
 [[NVIDIA's Agent Infrastructure Bet]] is this same decomposition showing up in a hardware vendor's keynote — evidence the discipline described here is converging into an industry-standard mental model.
 
 
+[[Structured Prompt-Driven Development (SPDD)]] is the most worked-out attempt in the wiki to build the behaviour harness this essay says is unsolved: its REASONS Canvas is a guide formalized into a fixed seven-part template, and its API-test and unit-test steps are the sensors checked against it. It also concedes the limit flagged here — nothing verifies that the specification itself captured the real intent.
+
+
 [[The Harness Is the Product]] places this essay as the engineering vantage point of the wider claim, and picks up the behaviour-harness problem flagged here as the cluster's central unsolved question.
 
 ## Sources

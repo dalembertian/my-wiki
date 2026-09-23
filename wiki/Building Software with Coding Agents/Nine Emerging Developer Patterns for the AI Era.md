@@ -28,6 +28,9 @@ Pattern 8 (MCP) is in direct tension with [[The Case for Markdown Skill Files In
 Several patterns here have dedicated pages: pattern 7's asynchronous agent work is developed fully in [[Loop Engineering]], and pattern 8's tool layer gets a security-motivated treatment in [[Function Calling and Tool Use in LLMs]]. The reason these patterns are emerging at all — software shifting from coded rules to learned behavior — is the subject of [[From Data-Driven Software to Generative AI]].
 
 
+Pattern 1 (AI-native Git) is no longer only a prediction: [[Structured Prompt-Driven Development (SPDD)]] is a full methodology built on exactly that shift, committing the structured prompt alongside the code and syncing it back whenever the code changes.
+
+
 Pattern 9's abstracted-primitives thinking is one of the vantage points collected in [[The Harness Is the Product]].
 
 ## Sources
