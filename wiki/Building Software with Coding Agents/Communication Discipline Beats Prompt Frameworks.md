@@ -60,6 +60,8 @@ This is one practitioner's experience argued forcefully, not a study: "never onc
 
 [[The Last Solo Programmers]] worries that the prompt-only specialist will lack the skill to catch the AI's mismatches; this page answers from the craftsman side of that split, insisting the skill that matters — knowing what to ask for, what not to accept, and how to measure — stays entirely with the human and is what makes the tool pay. Read together they disagree about who is at risk: Baquero fears erosion in people who delegate broadly, Akita says those people were always replaceable and the tool merely made the replacement cheap.
 
+[[Defending Against Destructive AI Agents]] is what Akita does about the distrust he keeps even with good prompting. It opens with this page's diagnosis (agent disasters usually come from vague instructions) and then refuses to rely on it: a sandbox, copy-on-write snapshots and offsite backups, so that one bad command can't cause permanent damage. Read alongside this page, it shows that his confidence in the model comes with a recovery plan.
+
 ## Sources
 - [Akita - Why LLMs Aren't Giving You the Result You Expect  & Why I Prefer Claude Code Today](<../../source/Akita - Why LLMs Aren't Giving You the Result You Expect  & Why I Prefer Claude Code Today.md>)
 

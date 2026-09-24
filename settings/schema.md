@@ -6,7 +6,7 @@ This is the operating schema for the LLM wiki: the concrete conventions layered 
 
 - **Everything stays inside this vault.** Never read or write any file outside this folder — not elsewhere on the filesystem. If a task seems to require touching something outside this folder, stop and ask — or, in an unattended run, skip the source and move on (see "Interactive vs. unattended ingestion").
 - **`inbox/` is the ingest queue.** Added 2026-09-24. The user drops articles here that are ready to ingest, and **everything in it is pending work**: to find out what needs ingesting, list `inbox/`. There's nothing to diff it against. Normally it's empty, apart from an empty `_assets/` folder, which stays. An article still sitting here after a run was skipped or is waiting on a decision (see "Interactive vs. unattended ingestion"). Articles with local images bring them along in `inbox/_assets/<folder>/`.
-- **`source/` is the archive of ingested articles.** It holds the user's curated raw material (articles, papers, images, data) once it has been ingested. Read from it freely, but never edit, delete, or rename anything in it. The only write it ever receives is the last step of a successful ingest: moving an article, and its assets folder if it has one, over from `inbox/` (see "Ingest workflow"). Nothing else is created in it. Before 2026-09-24 the user dropped articles straight into `source/` and pending work was found by diffing it against `tracking/ingested.md`; `inbox/` replaced that.
+- **`source/` is the archive of ingested articles.** It holds the user's curated raw material (articles, papers, images, data) once it has been ingested. Read from it freely, but never edit, delete, or rename anything in it. The only write it ever receives is the last step of a successful ingest: moving an article, and its assets folder if it has one, over from `inbox/` (see "Ingest workflow"). Nothing else is created in it. The one exception is a duplicate the user has decided to swap out (see "Duplicates, including translations"). Even then, nothing is deleted: `source/` is gitignored, so the displaced article and its assets go to the vault's `.trash/` and `.trash/_assets/`, where they can still be recovered. Before 2026-09-24 the user dropped articles straight into `source/` and pending work was found by diffing it against `tracking/ingested.md`; `inbox/` replaced that.
 - **An *article* is a `.md` file sitting directly in `inbox/` or `source/`** — that, and nothing else. Defined 2026-09-11, so that an unattended run and an interactive session agree on what a folder holds without either of them having to guess. Everything else in those folders is invisible to the ingest: subfolders and their contents (`_assets/` holds images that belong to articles, not articles), non-markdown files, and operating-system artefacts such as `.DS_Store`. Only articles are ingested, recorded in `tracking/ingested.md`, or counted as pending work. An article's images in `_assets/` are still read when they help make sense of it (see "Ingest workflow") — being readable is not the same as being ingestable.
 - **`Clippings/` is the user's staging area — ignore it entirely.** Added 2026-09-11. New articles are clipped from the web into here, not into `inbox/`, because they usually need work first (renaming, downloading images, dropping paywall cruft, deciding whether they're worth keeping at all). Treat it as if it weren't there: never read it, never ingest from it, never list its files in `tracking/ingested.md`, and never move anything out of it. **Promotion from `Clippings/` to `inbox/` is a manual user action, and it is the only signal that an article is ready.** An article sitting in `Clippings/` is not pending work — it's work the user hasn't decided on yet, so don't volunteer it, count it as unprocessed, or ask about it each session. The folder is gitignored, so it won't appear in version control either.
 - **`wiki/` is LLM-owned.** This is the layer you write and maintain — category folders and pages. The user reads it and will generally not edit it directly.
@@ -170,6 +170,19 @@ Until 2026-09-24 this file was a checklist that had to be diffed against `source
 
 ## Ingest workflow
 
+**Duplicates, including translations.** Added 2026-09-25, after an English article was ingested as a new source for a page already built from its Portuguese original. Before filing anything, check whether the article is already in the wiki under another name. Filenames won't catch this: a translation, a republication or a re-clip has a different title and a different `source:` URL. Compare these signals against `3.Articles.md` and the articles in `source/`, and treat a match on any two of them as a probable duplicate:
+- same author or publisher, and a `source:` URL on the same site (a language segment such as `/en/` or `/pt/` in the path is a strong hint);
+- a title that says the same thing in another language;
+- the same section structure, the same examples, the same quoted people or the same figures.
+
+Interactive: flag it and ask the user which version to keep. **By default keep the English version**, because the wiki is written in English. Unattended: skip it (see below). If the user keeps the new version, it replaces the old one rather than joining it:
+- the page's `## Sources` bullet is repointed to the new article, and any note about the source's language is updated;
+- the old article's line in `tracking/ingested.md` is removed, and the new one gets its own line;
+- the old article and its assets folder move from `source/` to `.trash/` and `.trash/_assets/`;
+- `3.Articles.md`, `1.Index.md` and `4.History.md` change only if the page's summary does. The History date stays the date the page was first written.
+
+If the user keeps the old version, the new article is simply removed from `inbox/`. Log either outcome as an `edit`. A genuinely different piece by the same author on the same topic is not a duplicate; it gets its own page or a second `## Sources` bullet as usual.
+
 **Personal/living-list notes are out of scope.** If a source file has no clipped-article frontmatter (no `source:` URL — i.e. it's the user's own running note, not something clipped from the web), don't fold it into the normal ingest flow. Flag it and ask what to do — an unattended run skips it instead (see "Interactive vs. unattended ingestion"). Decided 2026-08-25: no auto-detection or special "living list" handling — the wiki stays one-article-to-one-static-page throughout. The user removes such files from `inbox/` themselves when they don't want them ingested; treat that as the default resolution unless told otherwise for a specific file.
 
 ### Interactive vs. unattended ingestion
@@ -187,6 +200,7 @@ There's no fixed default — always ask when there's new material to ingest, sin
 The trade for that autonomy is a strict rule: **wherever the interactive flow would stop and ask, an unattended run skips that source instead** — leaves it (and its assets) where it is in `inbox/`, records nothing for it in `tracking/ingested.md`, changes nothing in the wiki on its account, and moves on to the next one. Nothing is guessed and nothing is left half-written. A skipped source is not lost: it stays in `inbox/` and gets picked up by a later run once whatever caused the skip is resolved. Concretely, an unattended run skips rather than decides when:
 
 - the source has no clipped-article frontmatter (see "Personal/living-list notes are out of scope" above);
+- it looks like a duplicate of something already ingested, a translation included (see "Duplicates, including translations" above);
 - no existing category fits it — unattended runs **never create a category folder, and never edit `settings/categories.md`**, since the category list is meant to stay minimal and folding-vs-creating is a judgement worth a human (see "Wiki structure");
 - it looks like it wants splitting across pages, or merging into an existing page (see "Splitting and merging");
 - `source/` already holds an article with the same filename, or an assets folder with the same name (never overwrite — see step 5 below);
@@ -197,7 +211,7 @@ Two further limits. Unattended runs do **not** create, revise, or retire pages i
 What does *not* relax unattended: the end-of-batch reciprocity pass (see "Links must be reciprocal"). It matters more here than interactively, not less, because nobody is reading the pages as they are written.
 
 For each article in `inbox/`:
-1. Read it (and any local images in its `inbox/_assets/` subfolder if relevant to understanding it).
+1. Read it (and any local images in its `inbox/_assets/` subfolder if relevant to understanding it), and check that it isn't already in the wiki in another form (see "Duplicates, including translations").
 2. If one-at-a-time: discuss key takeaways with the user before writing.
 3. File a page under the category folder it fits best, per `settings/categories.md` (create a new category only if nothing existing fits, adding its entry there in the same pass — see "Wiki structure"; interactive only, an unattended run skips the source instead), and update any other existing pages it materially affects — including adding the reciprocal link to every page this one links to (see "Links must be reciprocal").
 4. Add its entry to `3.Articles.md` (one bullet with summary, tags and a `^block-id`), `1.Index.md` (one-line link to that block), and a row to `4.History.md` (dated today).
@@ -223,6 +237,7 @@ On request, health-check the wiki:
 - sources whose content spans clearly unrelated categories that might read better split into multiple pages
 - any `source/` links that resolved wrong or point outside the wiki (see "Sources section" note above)
 - whether `tracking/ingested.md` has a line for every article in `source/` (and no line for an article that isn't there), whether every `source/_assets/` folder belongs to an article in `source/`, and whether anything has been sitting in `inbox/` since before the last run (a skip that nobody has dealt with)
+- two articles in `source/` that are the same piece: translations, republications or re-clips (see "Duplicates, including translations")
 - whether the current category list still fits, or needs consolidating/splitting — and whether `settings/categories.md` still matches the folders actually under `wiki/` (a folder with no entry, or an entry with no folder, is an error)
 - whether any `Syntheses` page has grown a `## Sources` section, or any category page has lost one
 - clusters that now meet the four criteria for a new synthesis — and existing syntheses whose thesis no longer holds up against newer pages

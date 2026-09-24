@@ -1,7 +1,5 @@
 # Defending Against Destructive AI Agents: Sandboxing, Snapshots, and Backups
 
-*Source is in Portuguese ("How do I protect myself from my agents deleting my stuff?"); synthesized in English here for consistency with the rest of the wiki.*
-
 Prompted by two viral incidents: Matt Shumer's coding agent mis-expanded `$HOME` and ran `rm -rf` against his actual home directory, deleting nearly his entire Mac; a separate user reproduced similar destructive behavior on a disposable devnet, corrupting `/var` and `/etc` badly enough to require an OS reinstall. The author rejects both reactions this usually produces ("AI is too dangerous to run unsupervised" and "you deserved it for using YOLO mode") as lazy. His own experience: five months of near-continuous, all-permissions-skipped agent use across Claude Code, Codex, and OpenCode — nearly 40 repos, 500K+ lines of code — with zero destructive incidents. His hypothesis: most horror stories trace back to vague, ambiguous prompting rather than a model "going rogue" — but he still doesn't fully trust LLMs, and turns that distrust into layered engineering rather than either blind confidence or avoidance.
 
 ## Layer 1 — sandbox
@@ -43,7 +41,9 @@ The guardrail component of the layer mapped in [[The Harness Is the Product]].
 
 [[Comparing Coding Agent Harnesses - Pi, Oh-My-Pi, OpenCode and Claude Code]] is the same author's survey of the harnesses he runs this way, and it states the productivity case that these three layers pay for: let the agent run the tests, read the whole log and open the files, because manually rationing context is what actually degrades its next step. The two pages are one argument split in half — permissive operation there, recoverability here — and the five-month, all-permissions-skipped record cited on this page is what that review's advice assumes.
 
+[[Communication Discipline Beats Prompt Frameworks]] is where the author argues at length the hypothesis this page only states in passing: when an agent "goes berserk", the cause is usually an ambiguous request, not the model. Read together they make one position: good prompting is his first line of defense, and the three layers here exist for when it fails anyway. Neither one is enough without the other.
+
 ## Sources
-- [Como me precaver pros meus agentes não apagarem minhas coisas?](<../../source/Como me precaver pros meus agentes não apagarem minhas coisas?.md>)
+- [Akita - How Do I Protect Myself From My Agents Deleting My Stuff?](<../../source/Akita - How Do I Protect Myself From My Agents Deleting My Stuff?.md>)
 
 #ai-agents #harness-engineering #security #backup

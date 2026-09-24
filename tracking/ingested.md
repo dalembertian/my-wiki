@@ -28,7 +28,6 @@ Append-only record of every article ingested so far, newest at the bottom, each 
 - Andrej Karpathy llm-wiki.md — [The LLM Wiki Pattern](<../wiki/AI Tools/The LLM Wiki Pattern.md>) (same content as settings/llm-wiki.md, the article that seeded this project)
 - Andrej Karpathy, Google and Garry Tan agree Markdown is the answer, but they're not solving the same problem.md — [Markdown as the New Agent Memory Moat](<../wiki/AI Insights/Markdown as the New Agent Memory Moat.md>)
 - Boardgame Rulebook Master Prompt.md — [A Document-Grounded Rules Referee via Prompt Engineering](<../wiki/AI Fundamentals/A Document-Grounded Rules Referee via Prompt Engineering.md>)
-- Como me precaver pros meus agentes não apagarem minhas coisas?.md — [Defending Against Destructive AI Agents](<../wiki/Building AI Agents/Defending Against Destructive AI Agents.md>)
 - First Steps Toward AI Agents in the Front Office.md — [Mews's AI Agents for Hotel Front Desks](<../wiki/AI Companies & Initiatives/Mews's AI Agents for Hotel Front Desks.md>)
 - How to Build a Custom Agent Harness.md — [LangChain's Middleware Model for Custom Agent Harnesses](<../wiki/Building AI Agents/LangChain's Middleware Model for Custom Agent Harnesses.md>)
 - Inherent, founded by DeepMind alumni, says its AI 'teammate' just outperformed Anthropic and OpenAI at replicating research.md — [Inherent Labs and Faraday](<../wiki/AI Companies & Initiatives/Inherent Labs and Faraday.md>)
@@ -47,3 +46,4 @@ Append-only record of every article ingested so far, newest at the bottom, each 
 - Who's Who in Ai - AI World Journal Ai World.md — [Who's Who in AI - A Dated Roster](<../wiki/AI Companies & Initiatives/Who's Who in AI - A Dated Roster.md>)
 - Akita - First Impressions Using Oh-My-Pi and OpenCode.md — [Comparing Coding Agent Harnesses - Pi, Oh-My-Pi, OpenCode and Claude Code](<../wiki/Building AI Agents/Comparing Coding Agent Harnesses - Pi, Oh-My-Pi, OpenCode and Claude Code.md>)
 - Akita - Why LLMs Aren't Giving You the Result You Expect  & Why I Prefer Claude Code Today.md — [Communication Discipline Beats Prompt Frameworks](<../wiki/Building Software with Coding Agents/Communication Discipline Beats Prompt Frameworks.md>)
+- Akita - How Do I Protect Myself From My Agents Deleting My Stuff?.md — [Defending Against Destructive AI Agents](<../wiki/Building AI Agents/Defending Against Destructive AI Agents.md>)
