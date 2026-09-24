@@ -60,6 +60,9 @@ These six are what [[Agent Harnesses]] describes as the valuable layer, in `pip 
 The "framework mattered less than prompt and tool design" finding is this page's contribution to [[The Harness Is the Product]] — a rare piece of evidence about *which* parts of the harness layer carry the weight.
 
 
+[[Comparing Coding Agent Harnesses - Pi, Oh-My-Pi, OpenCode and Claude Code]] runs this page's experimental design one layer up, on finished coding-agent CLIs instead of libraries: hold the model fixed, swap the harness, see what changes. Its result sharpens this one — where quality converged here once prompts and tool descriptions were good, there the prompts and tool descriptions are exactly what differ between harnesses, and the same GPT 5.5 found different defects in the same pull request depending on which CLI ran it. It also reports the opposite sign on token cost: a minimal harness saves little, because the spend is in reading code, logs and test output rather than in the system prompt.
+
+
 [[Workflows vs. Agents - LangGraph's Pattern Catalog]] is LangGraph's own documentation of what gets built with it, and it explains this page's LangGraph numbers from the inside. Most of its patterns are workflows, whose control flow is written into the graph before the model runs, which is where both the three-hour prototype time and the low token count come from. It also shows the Functional API, a less ceremonial way into the same runtime that this comparison didn't try.
 
 ## Sources

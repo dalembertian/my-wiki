@@ -45,3 +45,4 @@ Append-only record of every article ingested so far, newest at the bottom, each 
 - AI models chatting in ‘surreal’ dialect mixing poetic language and tech bro jargon.md — [Emergent Agent Dialects and the Oversight Problem](<../wiki/AI News/Emergent Agent Dialects and the Oversight Problem.md>)
 - LangGraph - Workflows and Agents.md — [Workflows vs. Agents - LangGraph's Pattern Catalog](<../wiki/Building AI Agents/Workflows vs. Agents - LangGraph's Pattern Catalog.md>)
 - Who's Who in Ai - AI World Journal Ai World.md — [Who's Who in AI - A Dated Roster](<../wiki/AI Companies & Initiatives/Who's Who in AI - A Dated Roster.md>)
+- Akita - First Impressions Using Oh-My-Pi and OpenCode.md — [Comparing Coding Agent Harnesses - Pi, Oh-My-Pi, OpenCode and Claude Code](<../wiki/Building AI Agents/Comparing Coding Agent Harnesses - Pi, Oh-My-Pi, OpenCode and Claude Code.md>)

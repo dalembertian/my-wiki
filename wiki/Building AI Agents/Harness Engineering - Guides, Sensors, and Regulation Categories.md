@@ -51,6 +51,9 @@ Applied instances of this discipline elsewhere in the wiki: [[LangChain's Middle
 
 [[The Harness Is the Product]] places this essay as the engineering vantage point of the wider claim, and picks up the behaviour-harness problem flagged here as the cluster's central unsolved question.
 
+
+[[Comparing Coding Agent Harnesses - Pi, Oh-My-Pi, OpenCode and Claude Code]] describes the inner harness this discipline is built on top of — which tools the vendor ships, how insistently its prompt routes the model toward LSP or AST instead of shell, and how much context survives compaction. Two things there bear directly on this essay: its 200K-token floor is a hard constraint on how much sensor output a harness can usefully feed back before detail is lost, and its three-way pull-request review, where each agent caught a different subset of the defects, is a measured instance of inferential sensors being probabilistic rather than complete.
+
 ## Sources
 - [Harness engineering for coding agent users](<../../source/Harness engineering for coding agent users.md>)
 

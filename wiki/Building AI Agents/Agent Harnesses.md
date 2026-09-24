@@ -29,6 +29,9 @@ Inbound context: the harness-layer land grab here is the current instance of the
 
 This page is the market vantage point in [[The Harness Is the Product]], which collects the four independent lines of evidence for the harness-as-product claim — and notes that vendors selling runtimes are interested parties.
 
+
+[[Comparing Coding Agent Harnesses - Pi, Oh-My-Pi, OpenCode and Claude Code]] is the unpriced half of this market: the terminal CLIs developers actually run all day, where the differentiators are tool registries, prompt routing and compaction rather than session-hour rates. It also contributes the cleanest evidence available for the Agent = Model + Harness claim asserted here — one model, two harnesses, different results on the same pull request — and shows where the subscription terms described in the labs' own compliance docs bite in practice, by dictating which harness you may use with which model.
+
 ## Sources
 - [Anthropic, OpenAI, Google, and Microsoft agree that the harness is the product. They disagree on the price.](<../../source/Anthropic, OpenAI, Google, and Microsoft agree that the harness is the product. They disagree on the price..md>)
 

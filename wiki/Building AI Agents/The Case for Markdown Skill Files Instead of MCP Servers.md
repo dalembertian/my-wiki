@@ -33,6 +33,9 @@ The same argument from other angles: [[Karpathy's 'Think Before Coding' Skills F
 
 The knowledge component of the layer mapped in [[The Harness Is the Product]].
 
+
+[[Comparing Coding Agent Harnesses - Pi, Oh-My-Pi, OpenCode and Claude Code]] is this argument met by a harness that bets the other way — roughly twenty built-in tools with descriptions rich enough to teach the model a SQLite addressing scheme inline, which is the schema-tokens cost this page prices out, spent deliberately. It also supplies a case the know/do split doesn't cleanly cover: a single universal `read` whose *prompt* carries the knowledge for archives, notebooks, spreadsheets and databases, rather than a server per format. And it reports the same finding from the other direction — the tool has to be described where the model can see it, or the model invents a shell command instead.
+
 ## Sources
 - [The case for running AI agents on Markdown files instead of MCP servers](<../../source/The case for running AI agents on Markdown files instead of MCP servers.md>)
 

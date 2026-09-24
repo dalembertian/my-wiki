@@ -40,6 +40,9 @@ Directly complements the "keep quality left" discipline in [[Harness Engineering
 
 The guardrail component of the layer mapped in [[The Harness Is the Product]].
 
+
+[[Comparing Coding Agent Harnesses - Pi, Oh-My-Pi, OpenCode and Claude Code]] is the same author's survey of the harnesses he runs this way, and it states the productivity case that these three layers pay for: let the agent run the tests, read the whole log and open the files, because manually rationing context is what actually degrades its next step. The two pages are one argument split in half — permissive operation there, recoverability here — and the five-month, all-permissions-skipped record cited on this page is what that review's advice assumes.
+
 ## Sources
 - [Como me precaver pros meus agentes não apagarem minhas coisas?](<../../source/Como me precaver pros meus agentes não apagarem minhas coisas?.md>)
 
