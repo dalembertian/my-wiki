@@ -59,6 +59,9 @@ These six are what [[Agent Harnesses]] describes as the valuable layer, in `pip 
 
 The "framework mattered less than prompt and tool design" finding is this page's contribution to [[The Harness Is the Product]] — a rare piece of evidence about *which* parts of the harness layer carry the weight.
 
+
+[[Workflows vs. Agents - LangGraph's Pattern Catalog]] is LangGraph's own documentation of what gets built with it, and it explains this page's LangGraph numbers from the inside. Most of its patterns are workflows, whose control flow is written into the graph before the model runs, which is where both the three-hour prototype time and the low token count come from. It also shows the Functional API, a less ceremonial way into the same runtime that this comparison didn't try.
+
 ## Sources
 - [6 Python AI Agent Frameworks Compared](<../../source/6 Python AI Agent Frameworks Compared.md>)
 

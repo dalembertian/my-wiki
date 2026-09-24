@@ -38,6 +38,9 @@ Loops at other scales: [[Why Most Enterprise Agentic Projects Are Doomed]] appli
 
 [[The Harness Is the Product]] collects this page's insistence that verification stays with the human alongside the same conclusion reached independently by Fowler, by the OpenAI collusion incident, and by the Fermat proof.
 
+
+[[Workflows vs. Agents - LangGraph's Pattern Catalog]] has this page's loop in miniature. Its evaluator-optimizer pattern is a generate-grade-retry cycle inside one run, and its example has no iteration cap, which is a small-scale reminder of why a loop needs a stopping rule.
+
 ## Sources
 - [Loop Engineering](<../../source/Loop Engineering.md>)
 

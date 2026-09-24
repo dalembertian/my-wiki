@@ -29,6 +29,9 @@ Part of the [[The Origins of Generative AI]] cluster. Companion technical explai
 
 [[When ChatGPT Broke an Entire Field - An Oral History]] is the same kind of first-person account of a paradigm shift, ten years later and in language rather than vision.
 
+
+[[Who's Who in AI - A Dated Roster]] is the hall-of-fame version of two of this page's three protagonists: Hinton and Li listed as luminaries, with none of the decades of doubt that this page is about.
+
 ## Sources
 - [The Birth of LLM - How a stubborn computer scientist accidentally launched the deep learning boom](<../../source/The Birth of LLM - How a stubborn computer scientist accidentally launched the deep learning boom.md>)
 

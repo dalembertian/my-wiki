@@ -20,6 +20,9 @@ Hassabis's own "too close to the technology" admission about missing ChatGPT's i
 
 [[The AI Revolution - From ANI to Superintelligence]] lays out the ANI→AGI→ASI framework Hassabis's timeline is stated within, and [[Inherent Labs and Faraday]] is a DeepMind-alumni spinout pursuing the research-automation piece of the same agenda.
 
+
+[[Who's Who in AI - A Dated Roster]] places Hassabis and DeepMind in the standard ten-name canon of the field, next to Musk, whose switch from DeepMind investor to OpenAI backer is told on this page.
+
 ## Sources
 - [Demis Hassabis - Our AI future](<../../source/Demis Hassabis - Our AI future.md>)
 

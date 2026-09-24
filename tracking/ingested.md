@@ -43,3 +43,5 @@ Append-only record of every article ingested so far, newest at the bottom, each 
 - 6 Python AI Agent Frameworks Compared.md — [Six Python Agent Frameworks Compared](<../wiki/Building AI Agents/Six Python Agent Frameworks Compared.md>)
 - Structured-Prompt-Driven Development (SPDD).md — [Structured Prompt-Driven Development (SPDD)](<../wiki/Building Software with Coding Agents/Structured Prompt-Driven Development (SPDD).md>)
 - AI models chatting in ‘surreal’ dialect mixing poetic language and tech bro jargon.md — [Emergent Agent Dialects and the Oversight Problem](<../wiki/AI News/Emergent Agent Dialects and the Oversight Problem.md>)
+- LangGraph - Workflows and Agents.md — [Workflows vs. Agents - LangGraph's Pattern Catalog](<../wiki/Building AI Agents/Workflows vs. Agents - LangGraph's Pattern Catalog.md>)
+- Who's Who in Ai - AI World Journal Ai World.md — [Who's Who in AI - A Dated Roster](<../wiki/AI Companies & Initiatives/Who's Who in AI - A Dated Roster.md>)

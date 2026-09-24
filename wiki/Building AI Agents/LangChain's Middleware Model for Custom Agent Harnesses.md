@@ -45,6 +45,9 @@ A concrete, framework-level answer to the open question [[Harness Engineering - 
 
 [[The Harness Is the Product]] treats this as the framework vantage point — what the abstract discipline looks like once someone has to ship it.
 
+
+[[Workflows vs. Agents - LangGraph's Pattern Catalog]] is the layer underneath. `create_agent` covers the free-running agent case, and that page catalogues the more constrained workflow shapes (chaining, routing, orchestrator-worker, evaluator-optimizer) for tasks that don't need an agent deciding its own path.
+
 ## Sources
 - [How to Build a Custom Agent Harness](<../../source/How to Build a Custom Agent Harness.md>)
 

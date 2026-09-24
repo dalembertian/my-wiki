@@ -34,6 +34,9 @@ Smolagents, in [[Six Python Agent Frameworks Compared]], is the live counterexam
 
 The tool layer as one enumerated component of [[The Harness Is the Product]].
 
+
+[[Workflows vs. Agents - LangGraph's Pattern Catalog]] builds its whole agent tier on this mechanism. Its `ToolNode` example is a neat illustration of this page's warning: a calculator tool that `eval()`s whatever expression the model sends, in official framework docs.
+
 ## Sources
 - [Function calling using LLMs](<../../source/Function calling using LLMs.md>)
 

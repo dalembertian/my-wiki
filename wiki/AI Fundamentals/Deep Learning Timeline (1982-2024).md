@@ -29,6 +29,9 @@ One caveat worth noting: the source is a lightly-sourced Substack chronology tha
 
 The overview page for this whole cluster is [[The Origins of Generative AI]]. Each of the pivotal entries here has a fuller treatment elsewhere in this wiki: the human story behind 2006-2012 is in [[AlexNet and the Three Nonconformists Who Built the Deep Learning Boom]], and the technical mechanics of backpropagation and convolutional layers are in [[How Computers Got Good at Recognizing Images]]. The paradigm argument for what the 2012→2022 arc did to software development itself is in [[From Data-Driven Software to Generative AI]]. For the 2022 ChatGPT entry's disruptive effect on a research field, see [[When ChatGPT Broke an Entire Field - An Oral History]]; for the longer speculative arc past 2024, [[The AI Revolution - From ANI to Superintelligence]].
 
+
+[[Who's Who in AI - A Dated Roster]] is the same cast indexed by name rather than by year. It adds Yoshua Bengio and Andrew Ng, who don't appear here, and shows how the canon looked before ChatGPT.
+
 ## Sources
 - [Timeline of Deep Learning's Evolution](<../../source/Timeline of Deep Learning's Evolution.md>)
 
