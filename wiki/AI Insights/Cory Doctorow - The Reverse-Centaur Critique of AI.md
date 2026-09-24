@@ -40,6 +40,10 @@ Read against the grain of this page: [[The Origins of Generative AI]] assembles 
 
 [[Is the AI Boom Real]] maps this argument's distinctive position — capability fake, harm real anyway — which is invisible on a single optimist-pessimist axis.
 
+[[Team Structures for an Agentic World - Pyramid to Hourglass]] is a vendor-side answer to the radiology example. An AWS keynote names the move Doctorow predicts, cutting juniors and keeping a thin layer of "agent managers", as "the trap", and quotes AWS's own CEO calling it "the dumbest thing I've ever heard." It stops short of his position, though. Its target is still a smaller, senior-heavy team, and it defends the junior pipeline because the company will need future verifiers, not on labor grounds.
+
+[[Who Will Check the AI]] uses the accountability sink as the labor-market version of its verifier problem. Doctorow's contribution there is to move the question from skill to blame: even a perfectly skilled reviewer fails when responsible for catching errors at machine speed.
+
 ## Sources
 - [Cory Doctorow - AI companies will fail](<../../source/Cory Doctorow - AI companies will fail.md>)
 

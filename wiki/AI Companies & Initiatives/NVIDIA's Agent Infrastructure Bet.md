@@ -1,4 +1,4 @@
-# NVIDIA's Agent Infrastructure Bet (GTC Taipei 2026)
+# NVIDIA's Agent Infrastructure Bet
 
 Jensen Huang's GTC Taipei 2026 keynote, unveiling NVIDIA's platforms across AI-factory infrastructure, agentic AI, physical AI/robotics, and AI-native personal computing — branded partly around the phrase **"CPU for Agents."**
 

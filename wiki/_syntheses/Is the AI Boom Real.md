@@ -58,4 +58,6 @@ The wiki's most useful contribution to this argument isn't another opinion — i
 
 Concretely, watch: datacenter vacancy rates reversing; whether enterprise agentic success rates move; whether the labs' harness revenue materializes as recurring or one-off; and whether displacement shows up in domains *without* mechanical verification, which is the case none of the current pages predicts well. The history these arguments extrapolate from is in [[The Origins of Generative AI]] — worth remembering that its own lesson is that consensus was wrong for a decade at a time, in both directions.
 
+[[Who Will Check the AI]] adds a consequence this map doesn't plot: displacement at the junior end removes the people the ground-truth checks above depend on to catch errors.
+
 #synthesis #ai-economy #market-impact #ai-hype #future-of-work

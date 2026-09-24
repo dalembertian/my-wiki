@@ -52,6 +52,6 @@ Read across the cluster, that is the actual dividing line. Where a mechanical gr
 
 ## Related syntheses
 
-[[Is the AI Boom Real]] takes the verification split developed here as its sharpest resolution of whether AI capability is real — it predicts uneven, domain-by-domain displacement rather than a uniform wave. [[The Origins of Generative AI]] is the history that produced the models this layer wraps.
+[[Is the AI Boom Real]] takes the verification split developed here as its sharpest resolution of whether AI capability is real — it predicts uneven, domain-by-domain displacement rather than a uniform wave. [[The Origins of Generative AI]] is the history that produced the models this layer wraps. [[Who Will Check the AI]] follows up this page's conclusion: if the human stays the verifier of last resort, the next question is whether that human will still exist, since the work AI absorbs is how verifiers are trained.
 
 #synthesis #agents #harness-engineering #agent-memory #ai-agents

@@ -35,6 +35,10 @@ Directly complements [[When ChatGPT Broke an Entire Field - An Oral History]] â€
 
 [[Communication Discipline Beats Prompt Frameworks]] takes the craftsman side of this page's split and pushes it further than the essay does: Akita agrees the skill that matters is knowing what to ask for and how to validate it, but concludes that agents will replace precisely the people this page worries about â€” and that they were always replaceable, only now the replacement is cheap. It is the most direct challenge here to the idea that prompt-only work is a new kind of loss rather than an old one repriced.
 
+[[Team Structures for an Agentic World - Pyramid to Hourglass]] moves this page's worry from the individual to the organization. If AI replaces the junior work that craftsmen learned on, companies stop producing the seniors who can verify AI output. The AWS talk's fix is structural rather than personal: keep hiring juniors in an "hourglass" org and redesign what they learn on. Singapore's agentic-AI governance framework, which the talk cites, goes further and makes preventing deskilling an explicit obligation.
+
+[[Who Will Check the AI]] places this essay's worry at the individual end of a four-scale problem: the ability to check AI output is built by doing the work AI now absorbs. Baquero's craftsman discipline is one of four competing remedies there, alongside process checkpoints, organizational structure and labor power.
+
 ## Sources
 - [The Last Solo Programmers](<../../source/The Last Solo Programmers.md>)
 

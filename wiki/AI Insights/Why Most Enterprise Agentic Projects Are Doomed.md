@@ -20,6 +20,8 @@ A real-world, organizational-scale case study of exactly the "loop, not a one-sh
 
 This page supplies the base rate for [[The Harness Is the Product]] — most agentic projects fail — and is a ground-truth check in [[Is the AI Boom Real]] against predictions of imminent displacement.
 
+[[Team Structures for an Agentic World - Pyramid to Hourglass]] turns this page's diagnosis into an org chart. What it calls "Model A" is the setup that stalled this project for twelve months: engineering builds the agent and hands it to a separate team to run and approve. Its answer is small senior pods that own a workflow end to end, sitting on a platform that enforces policy as code. That is this page's "approval as executable code" built into the org chart.
+
 ## Sources
 - [Most Enterprise Agentic Projects Are Doomed, Here's Why](<../../source/Most Enterprise Agentic Projects Are Doomed, Here's Why.md>)
 

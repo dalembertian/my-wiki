@@ -51,6 +51,8 @@ Pattern 1 of [[Nine Emerging Developer Patterns for the AI Era]] — "AI-native 
 
 [[Communication Discipline Beats Prompt Frameworks]] is the direct rebuttal to the premise of this method: Akita argues the fifteen-section template answers a communication failure with more volume rather than more quality, and that the same four things SPDD encodes in the REASONS Canvas (goal, approach, safeguards, definition of done) can be said conversationally by anyone who has the discipline to say them. Useful here as the test of what the canvas is actually buying — if the content is the same, the claim SPDD has to defend is the artifact: version control, review, and reuse by people who weren't in the conversation.
 
+[[Who Will Check the AI]] reads SPDD as the process-level answer to a verifier shortage: narrow checkpoints so that review can't collapse into approving by default. Its admission that "human judgement is still load-bearing" is one of that page's main pieces of evidence.
+
 ## Sources
 - [Structured-Prompt-Driven Development (SPDD)](<../../source/Structured-Prompt-Driven Development (SPDD).md>)
 

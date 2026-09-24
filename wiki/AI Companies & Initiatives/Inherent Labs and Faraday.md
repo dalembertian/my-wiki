@@ -1,4 +1,4 @@
-# Inherent Labs and Faraday: Small Models, RL, and 'Research Taste'
+# Inherent Labs and Faraday
 
 Inherent Labs (London, founded by Google DeepMind alumni including chief scientist Edward Hughes, $50M seed round) built **Faraday**, an AI agent that outperformed Anthropic's Claude Opus 4.8 and OpenAI's GPT-5.5 at independently replicating published scientific paper results — without being told the answer in advance. The notable part: Faraday runs on a comparatively tiny 27-billion-parameter model (Qwen 3.6), not a frontier-scale one.
 

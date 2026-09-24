@@ -14,6 +14,8 @@ Notably modest in ambition next to frontier-lab agent announcements elsewhere in
 
 [[Is the AI Boom Real]] uses this deployment as a ground-truth check — a working agent rollout that keeps humans in the loop by design.
 
+[[Who Will Check the AI]] singles this deployment out as the one place where the fix for disappearing human judgment is built into the product: an agent that advises and lets staff approve keeps them exercising the judgment, not just signing off on it.
+
 ## Sources
 - [First Steps Toward AI Agents in the Front Office](<../../source/First Steps Toward AI Agents in the Front Office.md>)
 

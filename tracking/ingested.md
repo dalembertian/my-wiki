@@ -48,3 +48,4 @@ Append-only record of every article ingested so far, newest at the bottom, each 
 - Akita - Why LLMs Aren't Giving You the Result You Expect  & Why I Prefer Claude Code Today.md — [Communication Discipline Beats Prompt Frameworks](<../wiki/Building Software with Coding Agents/Communication Discipline Beats Prompt Frameworks.md>)
 - Akita - How Do I Protect Myself From My Agents Deleting My Stuff?.md — [Defending Against Destructive AI Agents](<../wiki/Building AI Agents/Defending Against Destructive AI Agents.md>)
 - Akita - Talking a Bit About My AI Skills.md — [Write Your Own Agent Skills](<../wiki/Building Software with Coding Agents/Write Your Own Agent Skills.md>)
+- AWS - Advanced team structures in an agentic world.md — [Team Structures for an Agentic World - Pyramid to Hourglass](<../wiki/AI Insights/Team Structures for an Agentic World - Pyramid to Hourglass.md>)

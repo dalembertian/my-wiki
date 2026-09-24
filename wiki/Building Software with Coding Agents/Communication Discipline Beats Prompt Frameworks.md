@@ -64,6 +64,8 @@ This is one practitioner's experience argued forcefully, not a study: "never onc
 
 [[Write Your Own Agent Skills]] is what Akita does with the requests worth repeating: they become skills, versioned and refined each time something fails ("every line in these skills is a scar"). It fits this page's case against prompt frameworks, because his skills are his own communication discipline written down for his projects, and he tells readers not to copy them.
 
+[[Who Will Check the AI]] treats Akita as the main dissent in its set: where others see a shrinking supply of people able to check AI output, he sees a supply that was always smaller than headcount suggested, and a replacement that has merely become cheap.
+
 ## Sources
 - [Akita - Why LLMs Aren't Giving You the Result You Expect  & Why I Prefer Claude Code Today](<../../source/Akita - Why LLMs Aren't Giving You the Result You Expect  & Why I Prefer Claude Code Today.md>)
 
