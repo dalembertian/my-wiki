@@ -5,13 +5,14 @@ This is the operating schema for the LLM wiki: the concrete conventions layered 
 ## Boundaries
 
 - **Everything stays inside this vault.** Never read or write any file outside this folder — not elsewhere on the filesystem. If a task seems to require touching something outside this folder, stop and ask — or, in an unattended run, skip the source and move on (see "Interactive vs. unattended ingestion").
-- **`source/` is read-only.** It holds the user's curated raw material (articles, papers, images, data). Read from it freely, but never create, edit, delete, or rename anything in it. It's populated by the user only.
-- **An *article* is a `.md` file sitting directly in `source/`** — that, and nothing else. Defined 2026-09-11, so that an unattended run and an interactive session agree on what the folder holds without either of them having to guess. Everything else in `source/` is invisible to the ingest: subfolders and their contents (`_assets/` holds images that belong to articles, not articles), non-markdown files, and operating-system artefacts such as `.DS_Store`. Only articles are ingested, listed in `tracking/ingested.md`, or counted as pending work. An article's images in `_assets/` are still read when they help make sense of it (see "Ingest workflow") — being readable is not the same as being ingestable.
-- **`Clippings/` is the user's staging area — ignore it entirely.** Added 2026-09-11. New articles are clipped from the web into here, not into `source/`, because they usually need work first (renaming, downloading images, dropping paywall cruft, deciding whether they're worth keeping at all). Treat it as if it weren't there: never read it, never ingest from it, never list its files in `tracking/ingested.md`, and never move anything out of it. **Promotion from `Clippings/` to `source/` is a manual user action, and it is the only signal that an article is ready.** An article sitting in `Clippings/` is not pending work — it's work the user hasn't decided on yet, so don't volunteer it, count it as unprocessed, or ask about it each session. The folder is gitignored, so it won't appear in version control either.
+- **`inbox/` is the ingest queue.** Added 2026-09-24. The user drops articles here that are ready to ingest, and **everything in it is pending work**: to find out what needs ingesting, list `inbox/`. There's nothing to diff it against. Normally it's empty. An article still sitting here after a run was skipped or is waiting on a decision (see "Interactive vs. unattended ingestion"). Articles with local images bring them along in `inbox/_assets/<folder>/`.
+- **`source/` is the archive of ingested articles.** It holds the user's curated raw material (articles, papers, images, data) once it has been ingested. Read from it freely, but never edit, delete, or rename anything in it. The only write it ever receives is the last step of a successful ingest: moving an article, and its assets folder if it has one, over from `inbox/` (see "Ingest workflow"). Nothing else is created in it. Before 2026-09-24 the user dropped articles straight into `source/` and pending work was found by diffing it against `tracking/ingested.md`; `inbox/` replaced that.
+- **An *article* is a `.md` file sitting directly in `inbox/` or `source/`** — that, and nothing else. Defined 2026-09-11, so that an unattended run and an interactive session agree on what a folder holds without either of them having to guess. Everything else in those folders is invisible to the ingest: subfolders and their contents (`_assets/` holds images that belong to articles, not articles), non-markdown files, and operating-system artefacts such as `.DS_Store`. Only articles are ingested, recorded in `tracking/ingested.md`, or counted as pending work. An article's images in `_assets/` are still read when they help make sense of it (see "Ingest workflow") — being readable is not the same as being ingestable.
+- **`Clippings/` is the user's staging area — ignore it entirely.** Added 2026-09-11. New articles are clipped from the web into here, not into `inbox/`, because they usually need work first (renaming, downloading images, dropping paywall cruft, deciding whether they're worth keeping at all). Treat it as if it weren't there: never read it, never ingest from it, never list its files in `tracking/ingested.md`, and never move anything out of it. **Promotion from `Clippings/` to `inbox/` is a manual user action, and it is the only signal that an article is ready.** An article sitting in `Clippings/` is not pending work — it's work the user hasn't decided on yet, so don't volunteer it, count it as unprocessed, or ask about it each session. The folder is gitignored, so it won't appear in version control either.
 - **`wiki/` is LLM-owned.** This is the layer you write and maintain — category folders and pages. The user reads it and will generally not edit it directly.
 - **`1.Index.md`, `3.Articles.md` and `2.Syntheses.md` live at the root folder**, not inside `wiki/` — moved there 2026-08-27 so the user can see the catalog without opening the `wiki/` folder first. Still LLM-owned/maintained the same as everything under `wiki/`; only their location differs.
 - **`settings/` is co-owned.** Configuration and instructions, including this file. Both the user and the LLM can propose changes here as the wiki's conventions evolve. One exception: `settings/categories.md` is LLM-maintained like the wiki itself, since it has to track the folder tree — see "Wiki structure".
-- **`tracking/` is LLM-owned operational bookkeeping**, kept separate from `wiki/` so the wiki itself stays pure content: `log.md` (activity log) and `ingested.md` (which `source/` files have been processed).
+- **`tracking/` is LLM-owned operational bookkeeping**, kept separate from `wiki/` so the wiki itself stays pure content: `log.md` (activity log) and `ingested.md` (append-only record of which articles have been ingested, and into which pages).
 
 ## Wiki structure
 
@@ -67,7 +68,7 @@ When a page synthesizes more than one source (e.g. an article plus a separate no
 - [Second Source](<../../source/Second Source.md>)
 ```
 
-Link text is the source's filename without the `.md` extension. The link target is a **plain relative-path link**, not a wikilink — deliberately. Obsidian resolves a bare `[[Name]]` wikilink by title across the *whole vault*, and a source file often shares its exact filename with the wiki page derived from it (e.g. `source/Loop Engineering.md` and `wiki/Building AI Agents/Loop Engineering.md`), so a bare wikilink can silently land on the wrong one. A relative path wrapped in `<>` (needed since source filenames contain spaces) is unambiguous and always resolves to the file actually inside `source/`. Use the same explicit relative-path style (not a bare wikilink) for any other reference that crosses into `source/`.
+Link text is the source's filename without the `.md` extension. The link always points into `source/`, even though at the time the page is written the article is still in `inbox/`: the move at the end of the ingest is what makes the link resolve (see "Ingest workflow"). The link target is a **plain relative-path link**, not a wikilink — deliberately. Obsidian resolves a bare `[[Name]]` wikilink by title across the *whole vault*, and a source file often shares its exact filename with the wiki page derived from it (e.g. `source/Loop Engineering.md` and `wiki/Building AI Agents/Loop Engineering.md`), so a bare wikilink can silently land on the wrong one. A relative path wrapped in `<>` (needed since source filenames contain spaces) is unambiguous and always resolves to the file actually inside `source/`. Use the same explicit relative-path style (not a bare wikilink) for any other reference that crosses into `source/`.
 
 **Cross-referencing between wiki pages:** use Obsidian wikilinks (`[[Page Name]]`) freely — collision risk is low since these are wiki-authored titles. Tags stay inline in the page body (`#tag`), on the trailing tag line.
 
@@ -90,7 +91,7 @@ The default is still one source → one page, but don't force it when the conten
 **Splitting one source into multiple pages** — do this when a source bundles genuinely independent sub-topics that would each stand alone (different category fit, different tag cluster, doesn't need the other half's context to make sense) and bundling them actively hurts retrieval (a query about one sub-topic forces wading through the other). Length alone is not a reason to split — a long single-thesis article stays one page. When split:
 - Each resulting page's `## Sources` section cites the same original source as its own bullet (plus bullets for any other sources that page also draws on).
 - Add explicit `[[...]]` cross-references between the split pages so the reader can still find the sibling content.
-- `tracking/ingested.md`'s checklist line for that source lists every resulting page: `- [x] Source File.md — [[Page A]], [[Page B]]`.
+- `tracking/ingested.md`'s line for that source lists every resulting page: `- Source File.md — [[Page A]], [[Page B]]`.
 
 **Merging multiple pages into one** — already supported at ingest time via a multi-bullet Sources section (see above); this extends it to apply retroactively too, whenever overlap is discovered later (typically during a Lint pass, but can happen ad hoc). Merge when two or more pages argue essentially the same thesis from different sources (near-duplicates), or when their cross-references to each other are effectively substituting for sections a single page would have anyway. Don't merge pages that stay independently useful and retrievable on their own — for a cluster of related-but-distinct pages, prefer a short hub page (shared framing plus links to each spoke) over swallowing everything into one page, when each spoke still earns its own entry point. When merged:
 - The surviving page's `## Sources` section gains a bullet for every contributing source.
@@ -101,7 +102,7 @@ Log every split or merge as an `edit` entry in `tracking/log.md`, same as any ot
 
 ## Bootstrapping
 
-The bookkeeping files — `1.Index.md`, `2.Syntheses.md`, `3.Articles.md`, `4.History.md`, `tracking/log.md` and `tracking/ingested.md` — are fully specified by the sections below, as are the `wiki/`, `wiki/_syntheses/` and `source/` folders. **If any of them is missing, create it from its spec rather than stopping**, and carry on with the operation. Added 2026-09-11.
+The bookkeeping files — `1.Index.md`, `2.Syntheses.md`, `3.Articles.md`, `4.History.md`, `tracking/log.md` and `tracking/ingested.md` — are fully specified by the sections below, as are the `inbox/`, `source/`, `wiki/` and `wiki/_syntheses/` folders. **If any of them is missing, create it from its spec rather than stopping**, and carry on with the operation. Added 2026-09-11.
 
 `settings/categories.md` is the one file **not** covered by this rule: its contents are domain-specific, so an absent or empty one means the categories haven't been decided yet, not that they need regenerating. Start from whatever the first sources actually are, and write each entry as the folder is created.
 
@@ -157,24 +158,23 @@ where `type` is one of `ingest`, `query`, `lint`, `edit`. A one- or two-line not
 
 ## tracking/ingested.md
 
-A checklist of every article in `source/`, so it's obvious at a glance what's been processed — important since ingestion happens across sessions and sometimes in batches. One line per article:
+An append-only record of every article that has been ingested, and which page(s) it produced. One line per article, newest at the bottom:
 
 ```
-- [x] Exact Source Filename.md — [[Resulting Wiki Page]]
-- [ ] Not-yet-processed Filename.md
+- Exact Source Filename.md — [[Resulting Wiki Page]]
 ```
 
-Before starting an ingest session, diff the articles actually present in `source/` against this checklist to find anything unprocessed. `source/` only — `Clippings/` is out of scope for this diff and for ingestion generally (see "Boundaries"). Check an item off (and add the resulting page link) as soon as it's filed.
+Until 2026-09-24 this file was a checklist that had to be diffed against `source/` to find unprocessed articles. That job now belongs to `inbox/` (see "Boundaries"), so there's no longer any unticked state and the checkboxes were dropped: an article gets a line only once it has been successfully ingested and moved to `source/`, and a skipped article gets none. Lines are only ever changed afterwards to repoint them after a split or merge (see "Splitting and merging").
 
 ## Ingest workflow
 
-**Personal/living-list notes are out of scope.** If a source file has no clipped-article frontmatter (no `source:` URL — i.e. it's the user's own running note, not something clipped from the web), don't fold it into the normal ingest flow. Flag it and ask what to do — an unattended run skips it instead (see "Interactive vs. unattended ingestion"). Decided 2026-08-25: no auto-detection or special "living list" handling — the wiki stays one-article-to-one-static-page throughout. The user removes such files from `source/` themselves when they don't want them ingested; treat that as the default resolution unless told otherwise for a specific file.
+**Personal/living-list notes are out of scope.** If a source file has no clipped-article frontmatter (no `source:` URL — i.e. it's the user's own running note, not something clipped from the web), don't fold it into the normal ingest flow. Flag it and ask what to do — an unattended run skips it instead (see "Interactive vs. unattended ingestion"). Decided 2026-08-25: no auto-detection or special "living list" handling — the wiki stays one-article-to-one-static-page throughout. The user removes such files from `inbox/` themselves when they don't want them ingested; treat that as the default resolution unless told otherwise for a specific file.
 
 ### Interactive vs. unattended ingestion
 
 Ingestion runs in one of two modes. The only thing that separates them is whether a human is available to answer a question mid-run — the conventions in this document apply identically either way.
 
-**Interactive** — a person is at the other end of the session. New source(s) show up in `source/`. Before processing, **ask the user** whether to:
+**Interactive** — a person is at the other end of the session. New article(s) show up in `inbox/`. Before processing, **ask the user** whether to:
 - go **one at a time**, discussing key takeaways together before writing anything, or
 - **batch**, processing everything in one pass and reporting a summary afterward.
 
@@ -182,24 +182,26 @@ There's no fixed default — always ask when there's new material to ingest, sin
 
 **Unattended** — an external automated process performs the ingest on a trigger or a schedule, with nobody to ask. Added 2026-09-10. It is always **batch**: never ask which mode to use, never pause for confirmation, never wait for input at any point.
 
-The trade for that autonomy is a strict rule: **wherever the interactive flow would stop and ask, an unattended run skips that source instead** — leaves it unticked in `tracking/ingested.md`, changes nothing in the wiki on its account, and moves on to the next one. Nothing is guessed and nothing is left half-written. A skipped source is not lost: it stays pending and gets picked up by a later run once whatever caused the skip is resolved. Concretely, an unattended run skips rather than decides when:
+The trade for that autonomy is a strict rule: **wherever the interactive flow would stop and ask, an unattended run skips that source instead** — leaves it (and its assets) where it is in `inbox/`, records nothing for it in `tracking/ingested.md`, changes nothing in the wiki on its account, and moves on to the next one. Nothing is guessed and nothing is left half-written. A skipped source is not lost: it stays in `inbox/` and gets picked up by a later run once whatever caused the skip is resolved. Concretely, an unattended run skips rather than decides when:
 
 - the source has no clipped-article frontmatter (see "Personal/living-list notes are out of scope" above);
 - no existing category fits it — unattended runs **never create a category folder, and never edit `settings/categories.md`**, since the category list is meant to stay minimal and folding-vs-creating is a judgement worth a human (see "Wiki structure");
 - it looks like it wants splitting across pages, or merging into an existing page (see "Splitting and merging");
+- `source/` already holds an article with the same filename, or an assets folder with the same name (never overwrite — see step 5 below);
 - anything else about it is unexpected — an unreadable file, a situation this schema doesn't cover, or a step that would mean touching something outside this vault.
 
 Two further limits. Unattended runs do **not** create, revise, or retire pages in `wiki/_syntheses/`, and therefore never touch `2.Syntheses.md`: a synthesis has to clear four criteria and stay rare, which is a call for a human-initiated pass, not a side effect of filing new articles. And they keep their own operational record — run times, failures, what was skipped and why — **outside** the wiki; inside the wiki they append to `tracking/log.md` exactly like any other operation, and add nothing else.
 
 What does *not* relax unattended: the end-of-batch reciprocity pass (see "Links must be reciprocal"). It matters more here than interactively, not less, because nobody is reading the pages as they are written.
 
-For each source processed:
-1. Read it (and any local images in its `_assets/` subfolder if relevant to understanding it).
+For each article in `inbox/`:
+1. Read it (and any local images in its `inbox/_assets/` subfolder if relevant to understanding it).
 2. If one-at-a-time: discuss key takeaways with the user before writing.
 3. File a page under the category folder it fits best, per `settings/categories.md` (create a new category only if nothing existing fits, adding its entry there in the same pass — see "Wiki structure"; interactive only, an unattended run skips the source instead), and update any other existing pages it materially affects — including adding the reciprocal link to every page this one links to (see "Links must be reciprocal").
 4. Add its entry to `3.Articles.md` (heading + paragraph), `1.Index.md` (one-line link into that heading), and a row to `4.History.md` (dated today).
-5. Check the item off in `tracking/ingested.md`.
-6. Append an entry to `tracking/log.md`.
+5. **Move the article from `inbox/` to `source/`, together with its assets folder** (`inbox/_assets/<folder>/` → `source/_assets/<folder>/`), if it has one. Do this only once everything above has been written, so that a failure partway through leaves the article in `inbox/` and still pending. Moving never overwrites: if either target name already exists in `source/`, stop and ask (unattended: skip the article, see above). Find the assets folder by following the article's own image links rather than guessing it from the filename, because Obsidian changes some characters in folder names (`?` becomes `-`, for example). The article and its assets move together, so its relative `_assets/...` image links keep resolving.
+6. Append its line to `tracking/ingested.md`.
+7. Append an entry to `tracking/log.md`.
 
 ## Query workflow
 
@@ -218,7 +220,7 @@ On request, health-check the wiki:
 - pages that are near-duplicates of each other, or so densely cross-referenced they'd read better merged (see "Splitting and merging" above)
 - sources whose content spans clearly unrelated categories that might read better split into multiple pages
 - any `source/` links that resolved wrong or point outside the wiki (see "Sources section" note above)
-- whether `tracking/ingested.md` still matches what's actually in `source/`
+- whether `tracking/ingested.md` has a line for every article in `source/` (and no line for an article that isn't there), whether every `source/_assets/` folder belongs to an article in `source/`, and whether anything has been sitting in `inbox/` since before the last run (a skip that nobody has dealt with)
 - whether the current category list still fits, or needs consolidating/splitting — and whether `settings/categories.md` still matches the folders actually under `wiki/` (a folder with no entry, or an entry with no folder, is an error)
 - whether any `Syntheses` page has grown a `## Sources` section, or any category page has lost one
 - clusters that now meet the four criteria for a new synthesis — and existing syntheses whose thesis no longer holds up against newer pages

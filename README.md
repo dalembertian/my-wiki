@@ -55,14 +55,15 @@ The structural tell: **a synthesis is the only kind of page with no `## Sources`
 
 ### Everything else
 
-- **`source/`** — the raw material, immutable. Articles clipped from the web, with their original URL in the frontmatter. The LLM reads from here and never writes to it. Gitignored, per the note above.
+- **`inbox/`** — the ingest queue, normally empty. Dropping an article here is the signal that it's ready; once it's been ingested the LLM moves it (and its images) into `source/`. Anything still here after a run was skipped and is waiting on a decision. Gitignored, for the same reason as `source/`.
+- **`source/`** — the raw material, immutable once it arrives. Articles clipped from the web, with their original URL in the frontmatter. The LLM reads from here and never edits anything in it; the only thing it ever does to this folder is move a freshly ingested article in from `inbox/`. Gitignored, per the note above.
 - **[`settings/`](<./settings/>)** — the schema, the category list it applies to ([`categories.md`](<./settings/categories.md>)), and the original Karpathy gist that seeded it. `schema.md` holds the rules and is domain-independent; `categories.md` holds this wiki's seven categories and the boundary test for each.
-- **[`tracking/`](<./tracking/>)** — operational bookkeeping, kept out of `wiki/` so the wiki stays pure content. `ingested.md` is a checklist of which sources have been processed; `log.md` is an append-only record of every ingest, query, lint and structural edit.
+- **[`tracking/`](<./tracking/>)** — operational bookkeeping, kept out of `wiki/` so the wiki stays pure content. `ingested.md` is an append-only record of which articles have been ingested, and into which pages; `log.md` is an append-only record of every ingest, query, lint and structural edit.
 - **Tags** (`#agents`, `#ai-hype`, `#market-impact`, …) do the cross-cutting classification, so the folder tree can stay flat and shallow. Categories answer *"where does this file live"*; tags and syntheses answer *"what is this about"*.
 
 ### The three operations
 
-- **Ingest** — a new article lands in `source/`, the LLM reads it, files a page, links it both ways into the existing wiki, and updates the catalogs.
+- **Ingest** — a new article lands in `inbox/`, the LLM reads it, files a page, links it both ways into the existing wiki, updates the catalogs, and moves the article into `source/`.
 - **Query** — ask a question; the LLM reads the index, pulls the relevant pages, and answers with citations. If the answer turns out to be worth keeping, it gets filed back in — sometimes as a new synthesis.
 - **Lint** — a health check across the whole wiki: contradictions, stale claims, orphan pages, one-way links, near-duplicates that should merge, pages that should split, clusters that now deserve a synthesis.
 
@@ -91,15 +92,15 @@ That's the whole reset. The four catalogs and the two tracking files are fully s
 
 ### 2. Point the agent at it
 
-> Read `CLAUDE.md` and `settings/schema.md`. This is an LLM wiki, currently empty and with no categories decided yet. I'm going to start dropping articles into `source/`.
+> Read `CLAUDE.md` and `settings/schema.md`. This is an LLM wiki, currently empty and with no categories decided yet. I'm going to start dropping articles into `inbox/`.
 
 There's nothing to configure first. The categories that were here are gone with `settings/categories.md`, and the schema's rule is to write that file as folders get created — so your categories emerge from the first handful of articles rather than being guessed upfront. Don't try to design them in advance; you'll get them wrong, and the schema is built to let them be renamed later (mine were, twice).
 
 ### 3. Add your first article
 
-Create `source/` and drop any markdown file into it (in Obsidian, just dragging a file in makes the folder) — ideally with `title:` and `source:` (the URL) in the YAML frontmatter, which is what the Obsidian Web Clipper produces by default. Then:
+Create `inbox/` and drop any markdown file into it (in Obsidian, just dragging a file in makes the folder) — ideally with `title:` and `source:` (the URL) in the YAML frontmatter, which is what the Obsidian Web Clipper produces by default. Then:
 
-> There's a new article in `source/`. Ingest it.
+> There's a new article in `inbox/`. Ingest it.
 
 The agent will ask whether you want to go one-at-a-time (discussing takeaways before writing) or batch. **Go one-at-a-time at first** — the early pages set the tone for everything after them, and this is when you'll discover which conventions you actually want. Every time something feels wrong, say so and have the agent amend the schema. That negotiation *is* the setup process.
 
@@ -111,9 +112,9 @@ After a dozen or so pages, try `Lint the wiki` and `Which pages now qualify as a
 
 Not required — everything here is plain markdown and GitHub renders it fine — but it makes the whole thing considerably nicer:
 
-- **[Obsidian Web Clipper](https://obsidian.md/clipper)** — a browser extension that turns any web article into clean markdown with the source URL in the frontmatter. This is how essentially every article in `source/` got here. One convention worth stealing (it's in the schema, though the folder itself isn't in this repo): clip into a scratch `Clippings/` folder that the agent is told to ignore entirely, and make **moving a file from `Clippings/` to `source/` the manual signal that it's ready to ingest**. Raw clippings usually need work first — renaming, downloading images, stripping paywall cruft, or just deciding they aren't worth keeping — and this keeps the half-finished ones out of the agent's work queue instead of having it ask about them every session.
+- **[Obsidian Web Clipper](https://obsidian.md/clipper)** — a browser extension that turns any web article into clean markdown with the source URL in the frontmatter. This is how essentially every article in `source/` got here. One convention worth stealing (it's in the schema, though the folder itself isn't in this repo): clip into a scratch `Clippings/` folder that the agent is told to ignore entirely, and make **moving a file from `Clippings/` to `inbox/` the manual signal that it's ready to ingest**. Raw clippings usually need work first — renaming, downloading images, stripping paywall cruft, or just deciding they aren't worth keeping — and this keeps the half-finished ones out of the agent's work queue instead of having it ask about them every session.
 - **[obsidian-git](https://github.com/Vinzent03/obsidian-git)** — auto-commits the vault every 10 minutes and pushes on a schedule. You get full version history of your wiki for free, without ever thinking about it.
-- **Download images locally** — Settings → Files and links → set the attachment folder to `source/_assets/`, then bind the "Download attachments for current file" command to a hotkey. The agent can then actually look at the images instead of at dead URLs.
+- **Download images locally** — Settings → Files and links → set the attachment folder to `inbox/_assets/`, then bind the "Download attachments for current file" command to a hotkey. The agent can then actually look at the images instead of at dead URLs.
 - **Graph view** — the fastest way to see the shape of your wiki: what's a hub, what's peripheral, what's orphaned.
 - Work with the agent on one screen and Obsidian on the other. Obsidian is the IDE, the LLM is the programmer, the wiki is the codebase.
 

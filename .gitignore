@@ -7,8 +7,12 @@
 /.trash
 
 # Staging area for fresh web clippings, before they're cleaned up and
-# promoted into source/. Not ready to be read, let alone published.
+# promoted into inbox/. Not ready to be read, let alone published.
 /Clippings
+
+# Ingest queue: articles waiting to be ingested, moved to source/ once done.
+# Raw third-party content, same as source/ below.
+/inbox
 
 # Raw sources: verbatim copies of other people's articles, kept locally for
 # the LLM to read. Not redistributed — every wiki page cites its source URL
