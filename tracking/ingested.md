@@ -46,3 +46,4 @@ Append-only record of every article ingested so far, newest at the bottom, each 
 - LangGraph - Workflows and Agents.md — [Workflows vs. Agents - LangGraph's Pattern Catalog](<../wiki/Building AI Agents/Workflows vs. Agents - LangGraph's Pattern Catalog.md>)
 - Who's Who in Ai - AI World Journal Ai World.md — [Who's Who in AI - A Dated Roster](<../wiki/AI Companies & Initiatives/Who's Who in AI - A Dated Roster.md>)
 - Akita - First Impressions Using Oh-My-Pi and OpenCode.md — [Comparing Coding Agent Harnesses - Pi, Oh-My-Pi, OpenCode and Claude Code](<../wiki/Building AI Agents/Comparing Coding Agent Harnesses - Pi, Oh-My-Pi, OpenCode and Claude Code.md>)
+- Akita - Why LLMs Aren't Giving You the Result You Expect  & Why I Prefer Claude Code Today.md — [Communication Discipline Beats Prompt Frameworks](<../wiki/Building Software with Coding Agents/Communication Discipline Beats Prompt Frameworks.md>)

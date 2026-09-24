@@ -72,6 +72,8 @@ This is [[Agent Harnesses]] from the user's side of the counter: that page cover
 
 [[Defending Against Destructive AI Agents]] is by the same author and is the precondition for the advice here. "Let the harness run the command, let it read the log, eat the tokens" is only reasonable if a bad command is recoverable — sandboxing, copy-on-write snapshots and offsite backup are what make the permissive mode this page recommends affordable rather than reckless.
 
+[[Communication Discipline Beats Prompt Frameworks]] is this page's companion from the same author, and it supplies the "process still wins" line the closing framing here only gestures at: what to put in the prompt (goal, method, anti-goals, validation), why to stay in the room during a long run, and why he reaches for Claude Code over Codex — planning visibility and interruption behaviour, the same harness properties catalogued here, judged from the seat rather than from the source tree.
+
 ## Sources
 - [Akita - First Impressions Using Oh-My-Pi and OpenCode](<../../source/Akita - First Impressions Using Oh-My-Pi and OpenCode.md>)
 

@@ -33,6 +33,8 @@ Directly complements [[When ChatGPT Broke an Entire Field - An Oral History]] â€
 
 [[Is the AI Boom Real]] uses this page as a ground-truth check against the claim that AI's labor effects are pure hype.
 
+[[Communication Discipline Beats Prompt Frameworks]] takes the craftsman side of this page's split and pushes it further than the essay does: Akita agrees the skill that matters is knowing what to ask for and how to validate it, but concludes that agents will replace precisely the people this page worries about â€” and that they were always replaceable, only now the replacement is cheap. It is the most direct challenge here to the idea that prompt-only work is a new kind of loss rather than an old one repriced.
+
 ## Sources
 - [The Last Solo Programmers](<../../source/The Last Solo Programmers.md>)
 

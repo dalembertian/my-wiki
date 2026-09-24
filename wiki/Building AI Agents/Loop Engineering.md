@@ -41,6 +41,8 @@ Loops at other scales: [[Why Most Enterprise Agentic Projects Are Doomed]] appli
 
 [[Workflows vs. Agents - LangGraph's Pattern Catalog]] has this page's loop in miniature. Its evaluator-optimizer pattern is a generate-grade-retry cycle inside one run, and its example has no iteration cap, which is a small-scale reminder of why a loop needs a stopping rule.
 
+[[Communication Discipline Beats Prompt Frameworks]] is the anti-loop position, held by a heavy user: stay in the room, watch the run, interrupt to redirect, and put a manual approval gate between the phase that plans and the phase that acts. It is worth reading against the three things this page says get harder — his approval flag file is verification made structural, and his insistence that the prompt is a conversation rather than a contract is the daily-practice version of refusing cognitive surrender.
+
 ## Sources
 - [Loop Engineering](<../../source/Loop Engineering.md>)
 
