@@ -166,7 +166,7 @@ An append-only record of every article that has been ingested, and which page(s)
 
 The link is a relative-path markdown link into `wiki/`, the same style `3.Articles.md` uses. Never link to the article's own file in `source/`: that link would be to the input, not to what it produced.
 
-Until 2026-09-24 this file was a checklist that had to be diffed against `source/` to find unprocessed articles. That job now belongs to `inbox/` (see "Boundaries"), so there's no longer any unticked state and the checkboxes were dropped: an article gets a line only once it has been successfully ingested and moved to `source/`, and a skipped article gets none. Lines are only ever changed afterwards to repoint them after a split or merge (see "Splitting and merging").
+Until 2026-09-24 this file was a checklist that had to be diffed against `source/` to find unprocessed articles. That job now belongs to `inbox/` (see "Boundaries"), so there's no longer any unticked state and the checkboxes were dropped: an article gets a line only once it has been successfully ingested and moved to `source/`, and a skipped article gets none. Lines are only ever changed afterwards to repoint them after a split or merge (see "Splitting and merging"), or removed when a duplicate is swapped out (see "Duplicates, including translations").
 
 ## Ingest workflow
 

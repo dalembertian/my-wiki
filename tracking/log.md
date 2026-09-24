@@ -377,3 +377,8 @@ At the user's request, removed `source/Como me precaver pros meus agentes não a
 
 ## [2026-09-25] edit | Schema: detect duplicate articles, translations included
 Added "Duplicates, including translations" to the ingest workflow in `settings/schema.md`. It sets out how to spot a duplicate (same author or site, a title with the same meaning in another language, the same structure and examples), keeps the English version by default, and describes how to swap the old article for the new one, moving the displaced article to `.trash/`. Also added the check to ingest step 1, to the list of reasons an unattended run skips an article, to the exceptions in the `source/` boundary rule, and to the Lint workflow.
+
+## [2026-09-25] ingest | Write Your Own Agent Skills
+New page in `Building Software with Coding Agents` from Fabio Akita's "Talking a Bit About My AI Skills". Checked for duplicates first, per the new rule: it is a new piece, not a translation of anything in `source/`. Reciprocal links added to [[Karpathy's 'Think Before Coding' Skills File]] (the widely copied skill this page argues against), [[The Case for Markdown Skill Files Instead of MCP Servers]] (a practitioner's limits: attention cost, and knowledge vs. procedures), [[The LLM Wiki Pattern]] (ai-memory is the same pattern, one wiki per code project) and [[Communication Discipline Beats Prompt Frameworks]] (same author: good requests, written down as skills).
+
+`1.Index.md`, `3.Articles.md` and `4.History.md` updated; `tracking/ingested.md` line added. Article and its `_assets/` folder moved to `source/`; no name collision on either.

@@ -20,6 +20,8 @@ A real-world data point for [[The Case for Markdown Skill Files Instead of MCP S
 
 [[Markdown as the New Agent Memory Moat]] places this artifact in the wider industry bet on Markdown as agent substrate — while cautioning that it is a *different* Karpathy artifact from the "LLM Wiki" gist discussed there.
 
+[[Write Your Own Agent Skills]] is the counter-argument to how this file spread. Akita's rule is not to run other people's skills, because a skill carries its author's constraints and runs with your permissions, and a file adopted for its star count is exactly what he warns against. He doesn't object to reading one: study it, adapt it to your stack and merge it as your own.
+
 ## Sources
 - [Andrej Karpathy Skills](<../../source/Andrej Karpathy Skills.md>)
 

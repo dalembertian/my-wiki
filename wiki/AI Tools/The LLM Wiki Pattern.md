@@ -50,6 +50,8 @@ A further tier: **Claude Code** (the terminal-based coding agent) can read and w
 
 See [[Markdown as the New Agent Memory Moat]] for how this pattern is one of three separate, convergent industry bets on Markdown-as-agent-substrate (alongside Google's Open Knowledge Format and Garry Tan's gstack); [[The Case for Markdown Skill Files Instead of MCP Servers]], since this wiki's `settings/schema.md` is itself functionally a "skill file" of the kind that article describes; and `settings/llm-wiki.md` for the unmodified original text of the Karpathy piece.
 
+[[Write Your Own Agent Skills]] describes the pattern applied to code: Akita's ai-memory keeps one agent-maintained Markdown wiki per project (decisions, gotchas, handoffs between sessions) and cites Karpathy's gist as its origin. His advice to have the agent write down every piece of research and every decision that didn't become code is this page's ingest-and-compound idea used on engineering work.
+
 ## Sources
 - [Andrej Karpathy llm-wiki](<../../source/Andrej Karpathy llm-wiki.md>)
 - [Pairing Obsidian and Claude was the best thing that happened to my note-taking](<../../source/Pairing Obsidian and Claude was the best thing that happened to my note-taking.md>)

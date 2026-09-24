@@ -62,6 +62,8 @@ This is one practitioner's experience argued forcefully, not a study: "never onc
 
 [[Defending Against Destructive AI Agents]] is what Akita does about the distrust he keeps even with good prompting. It opens with this page's diagnosis (agent disasters usually come from vague instructions) and then refuses to rely on it: a sandbox, copy-on-write snapshots and offsite backups, so that one bad command can't cause permanent damage. Read alongside this page, it shows that his confidence in the model comes with a recovery plan.
 
+[[Write Your Own Agent Skills]] is what Akita does with the requests worth repeating: they become skills, versioned and refined each time something fails ("every line in these skills is a scar"). It fits this page's case against prompt frameworks, because his skills are his own communication discipline written down for his projects, and he tells readers not to copy them.
+
 ## Sources
 - [Akita - Why LLMs Aren't Giving You the Result You Expect  & Why I Prefer Claude Code Today](<../../source/Akita - Why LLMs Aren't Giving You the Result You Expect  & Why I Prefer Claude Code Today.md>)
 

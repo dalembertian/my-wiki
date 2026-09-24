@@ -36,6 +36,8 @@ The knowledge component of the layer mapped in [[The Harness Is the Product]].
 
 [[Comparing Coding Agent Harnesses - Pi, Oh-My-Pi, OpenCode and Claude Code]] is this argument met by a harness that bets the other way — roughly twenty built-in tools with descriptions rich enough to teach the model a SQLite addressing scheme inline, which is the schema-tokens cost this page prices out, spent deliberately. It also supplies a case the know/do split doesn't cleanly cover: a single universal `read` whose *prompt* carries the knowledge for archives, notebooks, spreadsheets and databases, rather than a server per format. And it reports the same finding from the other direction — the tool has to be described where the model can see it, or the model invents a shell command instead.
 
+[[Write Your Own Agent Skills]] is the argument tested by someone running skills daily across 40+ repositories, and it adds two limits. Progressive disclosure keeps unused skills cheap in context but not in the agent's attention ("an idle skill is debt"). And much of what this page calls "know" works better as project knowledge (`AGENTS.md`, memory pages, a working example to copy) than as a skill, which Akita keeps for procedures that repeat the same way.
+
 ## Sources
 - [The case for running AI agents on Markdown files instead of MCP servers](<../../source/The case for running AI agents on Markdown files instead of MCP servers.md>)
 
